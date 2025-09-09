@@ -1,7 +1,7 @@
 from typing import Any, Dict, List, Optional
 
-from ..execution.executor import Executor
-from ..execution.operators import SeqScan, Filter, Project, Insert as OpInsert, Operator, CreateTable as OpCreate, Delete as OpDelete, make_predicate
+from execution.executor import Executor
+from execution.operators import SeqScan, Filter, Project, Insert as OpInsert, Operator, CreateTable as OpCreate, Delete as OpDelete, make_predicate
 
 class Planner:
     def __init__(self, executor: Executor) -> None:

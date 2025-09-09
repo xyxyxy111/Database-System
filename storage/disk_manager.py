@@ -1,7 +1,7 @@
 import os
 from typing import Optional
 
-from .page import PAGE_SIZE
+from storage.page import PAGE_SIZE
 
 class DiskManager:
     """

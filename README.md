@@ -114,6 +114,3 @@ python main.py .\my.db "SELECT * FROM student;" --stats
 - [x] 缓存：LRU、命中统计、逐出日志
 - [x] 系统目录：特殊表持久化 schema 并启动加载
 - [x] CLI：多语句、@file.sql、`--debug-pipeline`、`--stats`
-
-## 十、许可
-本项目用于教学与学习目的，可自由扩展与改造。

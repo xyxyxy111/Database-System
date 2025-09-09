@@ -74,31 +74,33 @@ def run_sqls(db_file: str, sql: str, debug: bool = False, show_stats: bool = Fal
 def main() -> None:
     parser = argparse.ArgumentParser(description="Mini DB System")
     parser.add_argument("db_file", help="database file path")
-    parser.add_argument("sql", nargs=argparse.REMAINDER, help="SQL string or @file.sql")
+    parser.add_argument("sql", help="SQL string or @file.sql")
     parser.add_argument("--debug-pipeline", dest="debug", action="store_true", help="print tokens/AST/analyzed/plan")
     parser.add_argument("--stats", dest="stats", action="store_true", help="print buffer manager stats")
     args = parser.parse_args()
 
-    if not args.sql:
-        print("Usage: python main.py <db_file> <SQL or @file.sql> [--debug-pipeline] [--stats]")
-        return
-
     db_file = args.db_file
-    sql_arg = " ".join(args.sql)
+    sql_arg = args.sql
     if sql_arg.startswith("@"):
         with open(sql_arg[1:], "r", encoding="utf-8") as f:
             sql = f.read()
     else:
         sql = sql_arg
 
+    print(f"执行SQL: {sql}")
+    print(f"数据库文件: {db_file}")
+
     try:
         rows = run_sqls(db_file, sql, debug=args.debug, show_stats=args.stats)
+        print(f"执行结果: {rows}")
         for r in rows:
             print(r)
     except SemanticError as e:
         print(f"SemanticError: {e}")
     except Exception as e:
         print(f"Error: {e}")
+        import traceback
+        traceback.print_exc()
 
 
 if __name__ == "__main__":

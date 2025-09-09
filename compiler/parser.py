@@ -167,10 +167,21 @@ class Parser:
         cols: List[Tuple[str, str]] = []
         while True:
             name = self._eat("IDENT")[1]
-            typ_tok = self._eat("IDENT")[1].upper()
-            if typ_tok not in ("INT", "VARCHAR"):
-                raise SyntaxError(f"unsupported type {typ_tok}")
-            cols.append((name, typ_tok))
+            # 类型可以是关键字（INT, VARCHAR）或标识符
+            typ_tok = self._peek()
+            if typ_tok is None:
+                raise SyntaxError(self._expect_msg("type (INT or VARCHAR)"))
+            if typ_tok[0] in ("INT", "VARCHAR"):
+                typ_name = typ_tok[0]
+                self.pos += 1
+            elif typ_tok[0] == "IDENT":
+                typ_name = typ_tok[1].upper()
+                self.pos += 1
+            else:
+                raise SyntaxError(self._expect_msg("type (INT or VARCHAR)"))
+            if typ_name not in ("INT", "VARCHAR"):
+                raise SyntaxError(f"unsupported type {typ_name}")
+            cols.append((name, typ_name))
             tok = self._peek()
             if tok and tok[0] == "COMMA":
                 self._eat("COMMA")

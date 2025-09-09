@@ -1,8 +1,8 @@
 from collections import OrderedDict
 from typing import Dict, Tuple
 
-from .disk_manager import DiskManager
-from .page import Page, PAGE_SIZE
+from storage.disk_manager import DiskManager
+from storage.page import Page, PAGE_SIZE
 
 class BufferManager:
     """

@@ -1,4 +1,4 @@
-from ..execution.sytem_catalog import SystemCatalog
+from execution.sytem_catalog import SystemCatalog
 
 class CompilerCatalog:
     def __init__(self, syscat: SystemCatalog) -> None:

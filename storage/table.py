@@ -1,7 +1,7 @@
 from typing import Any, Dict, Iterable, List, Optional, Callable
 
-from .buffer_manager import BufferManager
-from .page import Page
+from storage.buffer_manager import BufferManager
+from storage.page import Page
 
 class Table:
     """
@@ -28,13 +28,17 @@ class Table:
         total = self.buffer.disk.num_pages()
         if total <= 1:
             page = self.buffer.new_page()
+            if not page.insert_row(row):
+                # 罕见情况：一行超过页大小
+                raise ValueError("row too large for a single page")
         else:
             page = self.buffer.get_page(total - 1)
             if not page.insert_row(row):
+                # 当前页已满，分配新页
                 page = self.buffer.new_page()
-        if not page.insert_row(row):
-            # 罕见情况：一行超过页大小
-            raise ValueError("row too large for a single page")
+                if not page.insert_row(row):
+                    # 罕见情况：一行超过页大小
+                    raise ValueError("row too large for a single page")
         self.buffer.flush_page(page.page_id)
 
     def scan(self) -> Iterable[Dict[str, Any]]:

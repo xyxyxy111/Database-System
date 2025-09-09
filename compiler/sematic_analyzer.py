@@ -1,7 +1,7 @@
 from typing import Any, Dict, List, Optional, Tuple
 
 from .parser import Select as ASTSelect, Insert as ASTInsert, CreateTable as ASTCreate, Delete as ASTDelete, AST
-from ..execution.sytem_catalog import SystemCatalog
+from execution.sytem_catalog import SystemCatalog
 
 class SemanticError(Exception):
     pass

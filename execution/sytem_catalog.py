@@ -1,8 +1,8 @@
 from typing import Dict, List, Tuple
 
-from ..storage.buffer_manager import BufferManager
-from ..storage.disk_manager import DiskManager
-from ..storage.table import Table
+from storage.buffer_manager import BufferManager
+from storage.disk_manager import DiskManager
+from storage.table import Table
 
 CATALOG_TABLE = "__catalog__"
 

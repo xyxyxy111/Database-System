@@ -1,7 +1,7 @@
 from typing import Any, Dict, Iterable, List, Optional
 
-from .operators import Operator
-from .sytem_catalog import SystemCatalog
+from execution.operators import Operator
+from execution.sytem_catalog import SystemCatalog
 
 Row = Dict[str, Any]
 
