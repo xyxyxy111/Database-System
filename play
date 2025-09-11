@@ -1,0 +1,30 @@
+# 创建表
+python main.py demo.db "CREATE TABLE students(id INT, name VARCHAR, age INT);"
+
+# 插入数据
+python main.py demo.db "INSERT INTO students(id,name,age) VALUES (1,'张三',20);"
+
+# 查询数据
+python main.py demo.db "SELECT * FROM students;"
+
+# 条件查询
+python main.py demo.db "SELECT name FROM students WHERE age >= 20;"
+
+# 删除数据
+python main.py demo.db "DELETE FROM students WHERE age < 18;"
+
+# 显示编译流水线
+python main.py demo.db "SELECT * FROM students;" --debug-pipeline
+
+# 显示缓冲统计
+python main.py demo.db "SELECT * FROM students;" --stats
+
+# 运行性能测试
+python test_execution_engine.py
+python test_system_integration.py
+python test_query_language.py
+
+# 插入数据后退出程序，重新启动查询验证数据持久化
+python main.py demo.db "INSERT INTO students(id,name,age) VALUES (2,'李四',19);"
+# 退出程序，重新启动
+python main.py demo.db "SELECT * FROM students;"

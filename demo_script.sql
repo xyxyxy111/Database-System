@@ -1,0 +1,17 @@
+CREATE TABLE students(id INT, name VARCHAR, age INT, grade VARCHAR);
+INSERT INTO students(id,name,age,grade) VALUES (1,'张三',20,'A');
+INSERT INTO students(id,name,age,grade) VALUES (2,'李四',19,'B');
+INSERT INTO students(id,name,age,grade) VALUES (3,'王五',21,'A');
+INSERT INTO students(id,name,age,grade) VALUES (4,'赵六',18,'C');
+INSERT INTO students(id,name,age,grade) VALUES (5,'钱七',22,'A');
+SELECT * FROM students;
+SELECT name, age FROM students WHERE age >= 20;
+SELECT * FROM students WHERE grade = 'A';
+DELETE FROM students WHERE grade = 'C';
+SELECT * FROM students;
+CREATE TABLE courses(id INT, name VARCHAR, credits INT);
+INSERT INTO courses(id,name,credits) VALUES (1,'数据库系统',3);
+INSERT INTO courses(id,name,credits) VALUES (2,'操作系统',4);
+INSERT INTO courses(id,name,credits) VALUES (3,'编译原理',3);
+SELECT * FROM courses;
+SELECT name FROM courses WHERE credits > 3;

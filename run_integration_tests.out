@@ -1,0 +1,2104 @@
+数据库系统集成测试套件
+============================================================
+
+============================================================
+运行测试: 核心CRUD操作测试
+测试文件: test_crud_operations.py
+============================================================
+[PASS] 核心CRUD操作测试 测试通过 (耗时: 2.06秒)
+输出:
+开始核心CRUD操作测试...
+==================================================
+=== 测试CREATE操作 ===
+[OK] 创建表: users
+[OK] 创建表: products
+[OK] 创建表: orders
+[OK] 已创建表: ['users', 'products', 'orders']
+
+=== 测试INSERT操作 ===
+=== 测试CREATE操作 ===
+[OK] 创建表: users
+[OK] 创建表: products
+[OK] 创建表: orders
+[OK] 已创建表: ['users', 'products', 'orders']
+[OK] 插入用户: 1 行
+[OK] 插入用户: 1 行
+[OK] 插入用户: 1 行
+[OK] 插入产品: 1 行
+[OK] 插入产品: 1 行
+[OK] 插入产品: 1 行
+[OK] 插入订单: 1 行
+[OK] 插入订单: 1 行
+[OK] 插入订单: 1 行
+
+=== 测试SELECT操作 ===
+
+=== 测试INSERT操作 ===
+=== 测试CREATE操作 ===
+[OK] 创建表: users
+[OK] 创建表: products
+[OK] 创建表: orders
+[OK] 已创建表: ['users', 'products', 'orders']
+[OK] 插入用户: 1 行
+[OK] 插入用户: 1 行
+[OK] 插入用户: 1 行
+[OK] 插入产品: 1 行
+[OK] 插入产品: 1 行
+[OK] 插入产品: 1 行
+[OK] 插入订单: 1 行
+[OK] 插入订单: 1 行
+[OK] 插入订单: 1 行
+[OK] 查询结果: 3 行
+  示例: {'id': 1, 'name': 'Alice', 'email': 'alice@example.com'}
+[OK] 查询结果: 3 行
+  示例: {'id': 1, 'name': 'Alice'}
+[OK] 查询结果: 3 行
+  示例: {'id': 1, 'name': 'Laptop', 'price': 1000, 'category': 'Electronics'}
+[OK] 查询结果: 3 行
+  示例: {'name': 'Laptop', 'price': 1000}
+[OK] 条件查询: 1 行
+  结果: [{'id': 1, 'name': 'Alice', 'email': 'alice@example.com'}]
+[OK] 条件查询: 2 行
+  结果: [{'id': 1, 'name': 'Laptop', 'price': 1000, 'category': 'Electronics'}, {'id': 3, 'name': 'Phone', 'price': 800, 'category': 'Electronics'}]
+[OK] 条件查询: 2 行
+  结果: [{'id': 1, 'name': 'Laptop', 'price': 1000, 'category': 'Electronics'}, {'id': 3, 'name': 'Phone', 'price': 800, 'category': 'Electronics'}]
+
+=== 测试DELETE操作 ===
+
+=== 测试SELECT操作 ===
+
+=== 测试INSERT操作 ===
+=== 测试CREATE操作 ===
+[OK] 创建表: users
+[OK] 创建表: products
+[OK] 创建表: orders
+[OK] 已创建表: ['users', 'products', 'orders']
+[OK] 插入用户: 1 行
+[OK] 插入用户: 1 行
+[OK] 插入用户: 1 行
+[OK] 插入产品: 1 行
+[OK] 插入产品: 1 行
+[OK] 插入产品: 1 行
+[OK] 插入订单: 1 行
+[OK] 插入订单: 1 行
+[OK] 插入订单: 1 行
+[OK] 查询结果: 3 行
+  示例: {'id': 1, 'name': 'Alice', 'email': 'alice@example.com'}
+[OK] 查询结果: 3 行
+  示例: {'id': 1, 'name': 'Alice'}
+[OK] 查询结果: 3 行
+  示例: {'id': 1, 'name': 'Laptop', 'price': 1000, 'category': 'Electronics'}
+[OK] 查询结果: 3 行
+  示例: {'name': 'Laptop', 'price': 1000}
+[OK] 条件查询: 1 行
+  结果: [{'id': 1, 'name': 'Alice', 'email': 'alice@example.com'}]
+[OK] 条件查询: 2 行
+  结果: [{'id': 1, 'name': 'Laptop', 'price': 1000, 'category': 'Electronics'}, {'id': 3, 'name': 'Phone', 'price': 800, 'category': 'Electronics'}]
+[OK] 条件查询: 2 行
+  结果: [{'id': 1, 'name': 'Laptop', 'price': 1000, 'category': 'Electronics'}, {'id': 3, 'name': 'Phone', 'price': 800, 'category': 'Electronics'}]
+[OK] 删除操作: 1 行
+[OK] 删除操作: 1 行
+[OK] 删除操作: 1 行
+[OK] 删除后验证: 2 行
+[OK] 删除后验证: 2 行
+[OK] 删除后验证: 2 行
+
+=== 测试复杂查询 ===
+
+=== 测试DELETE操作 ===
+
+=== 测试SELECT操作 ===
+
+=== 测试INSERT操作 ===
+=== 测试CREATE操作 ===
+[OK] 创建表: users
+[OK] 创建表: products
+[OK] 创建表: orders
+[OK] 已创建表: ['users', 'products', 'orders']
+[OK] 插入用户: 1 行
+[OK] 插入用户: 1 行
+[OK] 插入用户: 1 行
+[OK] 插入产品: 1 行
+[OK] 插入产品: 1 行
+[OK] 插入产品: 1 行
+[OK] 插入订单: 1 行
+[OK] 插入订单: 1 行
+[OK] 插入订单: 1 行
+[OK] 查询结果: 3 行
+  示例: {'id': 1, 'name': 'Alice', 'email': 'alice@example.com'}
+[OK] 查询结果: 3 行
+  示例: {'id': 1, 'name': 'Alice'}
+[OK] 查询结果: 3 行
+  示例: {'id': 1, 'name': 'Laptop', 'price': 1000, 'category': 'Electronics'}
+[OK] 查询结果: 3 行
+  示例: {'name': 'Laptop', 'price': 1000}
+[OK] 条件查询: 1 行
+  结果: [{'id': 1, 'name': 'Alice', 'email': 'alice@example.com'}]
+[OK] 条件查询: 2 行
+  结果: [{'id': 1, 'name': 'Laptop', 'price': 1000, 'category': 'Electronics'}, {'id': 3, 'name': 'Phone', 'price': 800, 'category': 'Electronics'}]
+[OK] 条件查询: 2 行
+  结果: [{'id': 1, 'name': 'Laptop', 'price': 1000, 'category': 'Electronics'}, {'id': 3, 'name': 'Phone', 'price': 800, 'category': 'Electronics'}]
+[OK] 删除操作: 1 行
+[OK] 删除操作: 1 行
+[OK] 删除操作: 1 行
+[OK] 删除后验证: 2 行
+[OK] 删除后验证: 2 行
+[OK] 删除后验证: 2 行
+[OK] 复杂查询: 1 行
+  结果: [{'id': 1, 'name': 'Alice', 'email': 'alice@example.com'}]
+[OK] 复杂查询: 2 行
+  结果: [{'id': 1, 'name': 'Laptop', 'price': 1000, 'category': 'Electronics'}, {'id': 3, 'name': 'Phone', 'price': 800, 'category': 'Electronics'}]
+[OK] 复杂查询: 1 行
+  结果: [{'id': 2, 'user_id': 2, 'product_id': 2, 'quantity': 2}]
+
+=== 测试事务模拟 ===
+
+=== 测试复杂查询 ===
+
+=== 测试DELETE操作 ===
+
+=== 测试SELECT操作 ===
+
+=== 测试INSERT操作 ===
+=== 测试CREATE操作 ===
+[OK] 创建表: users
+[OK] 创建表: products
+[OK] 创建表: orders
+[OK] 已创建表: ['users', 'products', 'orders']
+[OK] 插入用户: 1 行
+[OK] 插入用户: 1 行
+[OK] 插入用户: 1 行
+[OK] 插入产品: 1 行
+[OK] 插入产品: 1 行
+[OK] 插入产品: 1 行
+[OK] 插入订单: 1 行
+[OK] 插入订单: 1 行
+[OK] 插入订单: 1 行
+[OK] 查询结果: 3 行
+  示例: {'id': 1, 'name': 'Alice', 'email': 'alice@example.com'}
+[OK] 查询结果: 3 行
+  示例: {'id': 1, 'name': 'Alice'}
+[OK] 查询结果: 3 行
+  示例: {'id': 1, 'name': 'Laptop', 'price': 1000, 'category': 'Electronics'}
+[OK] 查询结果: 3 行
+  示例: {'name': 'Laptop', 'price': 1000}
+[OK] 条件查询: 1 行
+  结果: [{'id': 1, 'name': 'Alice', 'email': 'alice@example.com'}]
+[OK] 条件查询: 2 行
+  结果: [{'id': 1, 'name': 'Laptop', 'price': 1000, 'category': 'Electronics'}, {'id': 3, 'name': 'Phone', 'price': 800, 'category': 'Electronics'}]
+[OK] 条件查询: 2 行
+  结果: [{'id': 1, 'name': 'Laptop', 'price': 1000, 'category': 'Electronics'}, {'id': 3, 'name': 'Phone', 'price': 800, 'category': 'Electronics'}]
+[OK] 删除操作: 1 行
+[OK] 删除操作: 1 行
+[OK] 删除操作: 1 行
+[OK] 删除后验证: 2 行
+[OK] 删除后验证: 2 行
+[OK] 删除后验证: 2 行
+[OK] 复杂查询: 1 行
+  结果: [{'id': 1, 'name': 'Alice', 'email': 'alice@example.com'}]
+[OK] 复杂查询: 2 行
+  结果: [{'id': 1, 'name': 'Laptop', 'price': 1000, 'category': 'Electronics'}, {'id': 3, 'name': 'Phone', 'price': 800, 'category': 'Electronics'}]
+[OK] 复杂查询: 1 行
+  结果: [{'id': 2, 'user_id': 2, 'product_id': 2, 'quantity': 2}]
+[OK] 事务操作: {'inserted': 1}
+[OK] 事务操作: {'inserted': 1}
+[OK] 事务操作: {'inserted': 1}
+[OK] 事务完成，耗时: 0.0175 秒
+[OK] 事务验证: {'id': 4, 'name': 'David', 'email': 'david@example.com'}
+
+=== 测试性能基准 ===
+
+=== 测试事务模拟 ===
+
+=== 测试复杂查询 ===
+
+=== 测试DELETE操作 ===
+
+=== 测试SELECT操作 ===
+
+=== 测试INSERT操作 ===
+=== 测试CREATE操作 ===
+[OK] 创建表: users
+[OK] 创建表: products
+[OK] 创建表: orders
+[OK] 已创建表: ['users', 'products', 'orders']
+[OK] 插入用户: 1 行
+[OK] 插入用户: 1 行
+[OK] 插入用户: 1 行
+[OK] 插入产品: 1 行
+[OK] 插入产品: 1 行
+[OK] 插入产品: 1 行
+[OK] 插入订单: 1 行
+[OK] 插入订单: 1 行
+[OK] 插入订单: 1 行
+[OK] 查询结果: 3 行
+  示例: {'id': 1, 'name': 'Alice', 'email': 'alice@example.com'}
+[OK] 查询结果: 3 行
+  示例: {'id': 1, 'name': 'Alice'}
+[OK] 查询结果: 3 行
+  示例: {'id': 1, 'name': 'Laptop', 'price': 1000, 'category': 'Electronics'}
+[OK] 查询结果: 3 行
+  示例: {'name': 'Laptop', 'price': 1000}
+[OK] 条件查询: 1 行
+  结果: [{'id': 1, 'name': 'Alice', 'email': 'alice@example.com'}]
+[OK] 条件查询: 2 行
+  结果: [{'id': 1, 'name': 'Laptop', 'price': 1000, 'category': 'Electronics'}, {'id': 3, 'name': 'Phone', 'price': 800, 'category': 'Electronics'}]
+[OK] 条件查询: 2 行
+  结果: [{'id': 1, 'name': 'Laptop', 'price': 1000, 'category': 'Electronics'}, {'id': 3, 'name': 'Phone', 'price': 800, 'category': 'Electronics'}]
+[OK] 删除操作: 1 行
+[OK] 删除操作: 1 行
+[OK] 删除操作: 1 行
+[OK] 删除后验证: 2 行
+[OK] 删除后验证: 2 行
+[OK] 删除后验证: 2 行
+[OK] 复杂查询: 1 行
+  结果: [{'id': 1, 'name': 'Alice', 'email': 'alice@example.com'}]
+[OK] 复杂查询: 2 行
+  结果: [{'id': 1, 'name': 'Laptop', 'price': 1000, 'category': 'Electronics'}, {'id': 3, 'name': 'Phone', 'price': 800, 'category': 'Electronics'}]
+[OK] 复杂查询: 1 行
+  结果: [{'id': 2, 'user_id': 2, 'product_id': 2, 'quantity': 2}]
+[OK] 事务操作: {'inserted': 1}
+[OK] 事务操作: {'inserted': 1}
+[OK] 事务操作: {'inserted': 1}
+[OK] 事务完成，耗时: 0.0164 秒
+[OK] 事务验证: {'id': 4, 'name': 'David', 'email': 'david@example.com'}
+
+--- 大量数据插入测试 ---
+[OK] 插入100条记录，耗时: 0.5470 秒
+[OK] 插入速度: 183 行/秒
+
+--- 查询性能测试 ---
+[OK] 查询103条记录，耗时: 0.0003 秒
+[OK] 查询速度: 330538 行/秒
+
+=== 测试持久化 ===
+
+=== 测试性能基准 ===
+
+=== 测试事务模拟 ===
+
+=== 测试复杂查询 ===
+
+=== 测试DELETE操作 ===
+
+=== 测试SELECT操作 ===
+
+=== 测试INSERT操作 ===
+=== 测试CREATE操作 ===
+[OK] 创建表: users
+[OK] 创建表: products
+[OK] 创建表: orders
+[OK] 已创建表: ['users', 'products', 'orders']
+[OK] 插入用户: 1 行
+[OK] 插入用户: 1 行
+[OK] 插入用户: 1 行
+[OK] 插入产品: 1 行
+[OK] 插入产品: 1 行
+[OK] 插入产品: 1 行
+[OK] 插入订单: 1 行
+[OK] 插入订单: 1 行
+[OK] 插入订单: 1 行
+[OK] 查询结果: 3 行
+  示例: {'id': 1, 'name': 'Alice', 'email': 'alice@example.com'}
+[OK] 查询结果: 3 行
+  示例: {'id': 1, 'name': 'Alice'}
+[OK] 查询结果: 3 行
+  示例: {'id': 1, 'name': 'Laptop', 'price': 1000, 'category': 'Electronics'}
+[OK] 查询结果: 3 行
+  示例: {'name': 'Laptop', 'price': 1000}
+[OK] 条件查询: 1 行
+  结果: [{'id': 1, 'name': 'Alice', 'email': 'alice@example.com'}]
+[OK] 条件查询: 2 行
+  结果: [{'id': 1, 'name': 'Laptop', 'price': 1000, 'category': 'Electronics'}, {'id': 3, 'name': 'Phone', 'price': 800, 'category': 'Electronics'}]
+[OK] 条件查询: 2 行
+  结果: [{'id': 1, 'name': 'Laptop', 'price': 1000, 'category': 'Electronics'}, {'id': 3, 'name': 'Phone', 'price': 800, 'category': 'Electronics'}]
+[OK] 删除操作: 1 行
+[OK] 删除操作: 1 行
+[OK] 删除操作: 1 行
+[OK] 删除后验证: 2 行
+[OK] 删除后验证: 2 行
+[OK] 删除后验证: 2 行
+[OK] 复杂查询: 1 行
+  结果: [{'id': 1, 'name': 'Alice', 'email': 'alice@example.com'}]
+[OK] 复杂查询: 2 行
+  结果: [{'id': 1, 'name': 'Laptop', 'price': 1000, 'category': 'Electronics'}, {'id': 3, 'name': 'Phone', 'price': 800, 'category': 'Electronics'}]
+[OK] 复杂查询: 1 行
+  结果: [{'id': 2, 'user_id': 2, 'product_id': 2, 'quantity': 2}]
+[OK] 事务操作: {'inserted': 1}
+[OK] 事务操作: {'inserted': 1}
+[OK] 事务操作: {'inserted': 1}
+[OK] 事务完成，耗时: 0.0157 秒
+[OK] 事务验证: {'id': 4, 'name': 'David', 'email': 'david@example.com'}
+
+--- 大量数据插入测试 ---
+[OK] 插入100条记录，耗时: 0.5470 秒
+[OK] 插入速度: 183 行/秒
+
+--- 查询性能测试 ---
+[OK] 查询103条记录，耗时: 0.0002 秒
+[OK] 查询速度: 488151 行/秒
+[OK] 数据刷新完成
+
+--- 模拟数据库重启 ---
+[OK] 重启后数据恢复: 103 行
+
+==================================================
+[SUCCESS] 核心CRUD操作测试全部通过！
+
+
+============================================================
+运行测试: 执行引擎测试
+测试文件: test_execution_engine.py
+============================================================
+[PASS] 执行引擎测试 测试通过 (耗时: 34.45秒)
+输出:
+开始执行引擎测试...
+==================================================
+=== 测试基本算子 ===
+
+--- 测试CreateTable算子 ---
+[OK] CreateTable结果: {'created': 'test_table'}
+
+--- 测试Insert算子 ---
+[OK] Insert结果: {'inserted': 3}
+
+--- 测试SeqScan算子 ---
+[OK] SeqScan结果: 3 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+=== 测试Filter算子 ===
+=== 测试基本算子 ===
+
+--- 测试CreateTable算子 ---
+[OK] CreateTable结果: {'created': 'test_table'}
+
+--- 测试Insert算子 ---
+[OK] Insert结果: {'inserted': 3}
+
+--- 测试SeqScan算子 ---
+[OK] SeqScan结果: 3 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试过滤条件: 等于1 ---
+[OK] 过滤结果: 1 行
+  {'id': 1, 'name': 'Alice'}
+
+--- 测试过滤条件: 大于1 ---
+[OK] 过滤结果: 2 行
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试过滤条件: 小于3 ---
+[OK] 过滤结果: 2 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+
+--- 测试过滤条件: 大于等于2 ---
+[OK] 过滤结果: 2 行
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试过滤条件: 小于等于2 ---
+[OK] 过滤结果: 2 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+
+--- 测试过滤条件: 不等于1 ---
+[OK] 过滤结果: 2 行
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+=== 测试Project算子 ===
+
+=== 测试Filter算子 ===
+=== 测试基本算子 ===
+
+--- 测试CreateTable算子 ---
+[OK] CreateTable结果: {'created': 'test_table'}
+
+--- 测试Insert算子 ---
+[OK] Insert结果: {'inserted': 3}
+
+--- 测试SeqScan算子 ---
+[OK] SeqScan结果: 3 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试过滤条件: 等于1 ---
+[OK] 过滤结果: 1 行
+  {'id': 1, 'name': 'Alice'}
+
+--- 测试过滤条件: 大于1 ---
+[OK] 过滤结果: 2 行
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试过滤条件: 小于3 ---
+[OK] 过滤结果: 2 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+
+--- 测试过滤条件: 大于等于2 ---
+[OK] 过滤结果: 2 行
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试过滤条件: 小于等于2 ---
+[OK] 过滤结果: 2 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+
+--- 测试过滤条件: 不等于1 ---
+[OK] 过滤结果: 2 行
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试投影: 只投影id列 ---
+[OK] 投影结果: 3 行
+  {'id': 1}
+  {'id': 2}
+  {'id': 3}
+
+--- 测试投影: 只投影name列 ---
+[OK] 投影结果: 3 行
+  {'name': 'Alice'}
+  {'name': 'Bob'}
+  {'name': 'Charlie'}
+
+--- 测试投影: 投影id和name列 ---
+[OK] 投影结果: 3 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+=== 测试算子组合 ===
+
+=== 测试Project算子 ===
+
+=== 测试Filter算子 ===
+=== 测试基本算子 ===
+
+--- 测试CreateTable算子 ---
+[OK] CreateTable结果: {'created': 'test_table'}
+
+--- 测试Insert算子 ---
+[OK] Insert结果: {'inserted': 3}
+
+--- 测试SeqScan算子 ---
+[OK] SeqScan结果: 3 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试过滤条件: 等于1 ---
+[OK] 过滤结果: 1 行
+  {'id': 1, 'name': 'Alice'}
+
+--- 测试过滤条件: 大于1 ---
+[OK] 过滤结果: 2 行
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试过滤条件: 小于3 ---
+[OK] 过滤结果: 2 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+
+--- 测试过滤条件: 大于等于2 ---
+[OK] 过滤结果: 2 行
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试过滤条件: 小于等于2 ---
+[OK] 过滤结果: 2 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+
+--- 测试过滤条件: 不等于1 ---
+[OK] 过滤结果: 2 行
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试投影: 只投影id列 ---
+[OK] 投影结果: 3 行
+  {'id': 1}
+  {'id': 2}
+  {'id': 3}
+
+--- 测试投影: 只投影name列 ---
+[OK] 投影结果: 3 行
+  {'name': 'Alice'}
+  {'name': 'Bob'}
+  {'name': 'Charlie'}
+
+--- 测试投影: 投影id和name列 ---
+[OK] 投影结果: 3 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试Filter + Project组合 ---
+[OK] Filter + Project结果: 2 行
+  {'name': 'Bob'}
+  {'name': 'Charlie'}
+
+--- 测试Project + Filter组合 ---
+[OK] Project + Filter结果: 2 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+
+=== 测试Delete算子 ===
+
+=== 测试算子组合 ===
+
+=== 测试Project算子 ===
+
+=== 测试Filter算子 ===
+=== 测试基本算子 ===
+
+--- 测试CreateTable算子 ---
+[OK] CreateTable结果: {'created': 'test_table'}
+
+--- 测试Insert算子 ---
+[OK] Insert结果: {'inserted': 3}
+
+--- 测试SeqScan算子 ---
+[OK] SeqScan结果: 3 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试过滤条件: 等于1 ---
+[OK] 过滤结果: 1 行
+  {'id': 1, 'name': 'Alice'}
+
+--- 测试过滤条件: 大于1 ---
+[OK] 过滤结果: 2 行
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试过滤条件: 小于3 ---
+[OK] 过滤结果: 2 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+
+--- 测试过滤条件: 大于等于2 ---
+[OK] 过滤结果: 2 行
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试过滤条件: 小于等于2 ---
+[OK] 过滤结果: 2 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+
+--- 测试过滤条件: 不等于1 ---
+[OK] 过滤结果: 2 行
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试投影: 只投影id列 ---
+[OK] 投影结果: 3 行
+  {'id': 1}
+  {'id': 2}
+  {'id': 3}
+
+--- 测试投影: 只投影name列 ---
+[OK] 投影结果: 3 行
+  {'name': 'Alice'}
+  {'name': 'Bob'}
+  {'name': 'Charlie'}
+
+--- 测试投影: 投影id和name列 ---
+[OK] 投影结果: 3 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试Filter + Project组合 ---
+[OK] Filter + Project结果: 2 行
+  {'name': 'Bob'}
+  {'name': 'Charlie'}
+
+--- 测试Project + Filter组合 ---
+[OK] Project + Filter结果: 2 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+
+--- 测试删除操作 ---
+[OK] 删除前数据: 3 行
+[OK] 删除结果: {'deleted': 1}
+[OK] 删除后数据: 2 行
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+=== 测试执行性能 ===
+
+=== 测试Delete算子 ===
+
+=== 测试算子组合 ===
+
+=== 测试Project算子 ===
+
+=== 测试Filter算子 ===
+=== 测试基本算子 ===
+
+--- 测试CreateTable算子 ---
+[OK] CreateTable结果: {'created': 'test_table'}
+
+--- 测试Insert算子 ---
+[OK] Insert结果: {'inserted': 3}
+
+--- 测试SeqScan算子 ---
+[OK] SeqScan结果: 3 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试过滤条件: 等于1 ---
+[OK] 过滤结果: 1 行
+  {'id': 1, 'name': 'Alice'}
+
+--- 测试过滤条件: 大于1 ---
+[OK] 过滤结果: 2 行
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试过滤条件: 小于3 ---
+[OK] 过滤结果: 2 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+
+--- 测试过滤条件: 大于等于2 ---
+[OK] 过滤结果: 2 行
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试过滤条件: 小于等于2 ---
+[OK] 过滤结果: 2 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+
+--- 测试过滤条件: 不等于1 ---
+[OK] 过滤结果: 2 行
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试投影: 只投影id列 ---
+[OK] 投影结果: 3 行
+  {'id': 1}
+  {'id': 2}
+  {'id': 3}
+
+--- 测试投影: 只投影name列 ---
+[OK] 投影结果: 3 行
+  {'name': 'Alice'}
+  {'name': 'Bob'}
+  {'name': 'Charlie'}
+
+--- 测试投影: 投影id和name列 ---
+[OK] 投影结果: 3 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试Filter + Project组合 ---
+[OK] Filter + Project结果: 2 行
+  {'name': 'Bob'}
+  {'name': 'Charlie'}
+
+--- 测试Project + Filter组合 ---
+[OK] Project + Filter结果: 2 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+
+--- 测试删除操作 ---
+[OK] 删除前数据: 3 行
+[OK] 删除结果: {'deleted': 1}
+[OK] 删除后数据: 2 行
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 插入大量数据 ---
+[OK] 插入1000条记录，耗时: 5.1246 秒
+[OK] 插入速度: 195 行/秒
+
+--- 测试扫描性能 ---
+[OK] 扫描1002条记录，耗时: 0.0004 秒
+[OK] 扫描速度: 2381129 行/秒
+
+--- 测试过滤性能 ---
+[OK] 过滤499条记录，耗时: 0.0007 秒
+[OK] 过滤速度: 668890 行/秒
+
+=== 测试执行计划 ===
+
+=== 测试执行性能 ===
+
+=== 测试Delete算子 ===
+
+=== 测试算子组合 ===
+
+=== 测试Project算子 ===
+
+=== 测试Filter算子 ===
+=== 测试基本算子 ===
+
+--- 测试CreateTable算子 ---
+[OK] CreateTable结果: {'created': 'test_table'}
+
+--- 测试Insert算子 ---
+[OK] Insert结果: {'inserted': 3}
+
+--- 测试SeqScan算子 ---
+[OK] SeqScan结果: 3 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试过滤条件: 等于1 ---
+[OK] 过滤结果: 1 行
+  {'id': 1, 'name': 'Alice'}
+
+--- 测试过滤条件: 大于1 ---
+[OK] 过滤结果: 2 行
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试过滤条件: 小于3 ---
+[OK] 过滤结果: 2 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+
+--- 测试过滤条件: 大于等于2 ---
+[OK] 过滤结果: 2 行
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试过滤条件: 小于等于2 ---
+[OK] 过滤结果: 2 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+
+--- 测试过滤条件: 不等于1 ---
+[OK] 过滤结果: 2 行
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试投影: 只投影id列 ---
+[OK] 投影结果: 3 行
+  {'id': 1}
+  {'id': 2}
+  {'id': 3}
+
+--- 测试投影: 只投影name列 ---
+[OK] 投影结果: 3 行
+  {'name': 'Alice'}
+  {'name': 'Bob'}
+  {'name': 'Charlie'}
+
+--- 测试投影: 投影id和name列 ---
+[OK] 投影结果: 3 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试Filter + Project组合 ---
+[OK] Filter + Project结果: 2 行
+  {'name': 'Bob'}
+  {'name': 'Charlie'}
+
+--- 测试Project + Filter组合 ---
+[OK] Project + Filter结果: 2 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+
+--- 测试删除操作 ---
+[OK] 删除前数据: 3 行
+[OK] 删除结果: {'deleted': 1}
+[OK] 删除后数据: 2 行
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 插入大量数据 ---
+[OK] 插入1000条记录，耗时: 5.5841 秒
+[OK] 插入速度: 179 行/秒
+
+--- 测试扫描性能 ---
+[OK] 扫描1002条记录，耗时: 0.0003 秒
+[OK] 扫描速度: 3027877 行/秒
+
+--- 测试过滤性能 ---
+[OK] 过滤499条记录，耗时: 0.0005 秒
+[OK] 过滤速度: 1066747 行/秒
+
+--- 测试复杂执行计划 ---
+[OK] 复杂执行计划结果: 102 行
+[OK] 执行时间: 0.0004 秒
+  {'name': 'Bob'}
+  {'name': 'Charlie'}
+  {'name': 'User_0'}
+  {'name': 'User_1'}
+  {'name': 'User_2'}
+  ... 还有 97 行
+
+=== 测试错误处理 ===
+
+=== 测试执行计划 ===
+
+=== 测试执行性能 ===
+
+=== 测试Delete算子 ===
+
+=== 测试算子组合 ===
+
+=== 测试Project算子 ===
+
+=== 测试Filter算子 ===
+=== 测试基本算子 ===
+
+--- 测试CreateTable算子 ---
+[OK] CreateTable结果: {'created': 'test_table'}
+
+--- 测试Insert算子 ---
+[OK] Insert结果: {'inserted': 3}
+
+--- 测试SeqScan算子 ---
+[OK] SeqScan结果: 3 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试过滤条件: 等于1 ---
+[OK] 过滤结果: 1 行
+  {'id': 1, 'name': 'Alice'}
+
+--- 测试过滤条件: 大于1 ---
+[OK] 过滤结果: 2 行
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试过滤条件: 小于3 ---
+[OK] 过滤结果: 2 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+
+--- 测试过滤条件: 大于等于2 ---
+[OK] 过滤结果: 2 行
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试过滤条件: 小于等于2 ---
+[OK] 过滤结果: 2 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+
+--- 测试过滤条件: 不等于1 ---
+[OK] 过滤结果: 2 行
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试投影: 只投影id列 ---
+[OK] 投影结果: 3 行
+  {'id': 1}
+  {'id': 2}
+  {'id': 3}
+
+--- 测试投影: 只投影name列 ---
+[OK] 投影结果: 3 行
+  {'name': 'Alice'}
+  {'name': 'Bob'}
+  {'name': 'Charlie'}
+
+--- 测试投影: 投影id和name列 ---
+[OK] 投影结果: 3 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试Filter + Project组合 ---
+[OK] Filter + Project结果: 2 行
+  {'name': 'Bob'}
+  {'name': 'Charlie'}
+
+--- 测试Project + Filter组合 ---
+[OK] Project + Filter结果: 2 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+
+--- 测试删除操作 ---
+[OK] 删除前数据: 3 行
+[OK] 删除结果: {'deleted': 1}
+[OK] 删除后数据: 2 行
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 插入大量数据 ---
+[OK] 插入1000条记录，耗时: 5.1308 秒
+[OK] 插入速度: 195 行/秒
+
+--- 测试扫描性能 ---
+[OK] 扫描1002条记录，耗时: 0.0004 秒
+[OK] 扫描速度: 2323213 行/秒
+
+--- 测试过滤性能 ---
+[OK] 过滤499条记录，耗时: 0.0007 秒
+[OK] 过滤速度: 679752 行/秒
+
+--- 测试复杂执行计划 ---
+[OK] 复杂执行计划结果: 102 行
+[OK] 执行时间: 0.0006 秒
+  {'name': 'Bob'}
+  {'name': 'Charlie'}
+  {'name': 'User_0'}
+  {'name': 'User_1'}
+  {'name': 'User_2'}
+  ... 还有 97 行
+
+--- 测试不存在的表 ---
+[WARNING] 应该抛出异常但没有
+
+--- 测试无效的过滤条件 ---
+[WARNING] 应该抛出异常但没有
+
+=== 测试内存管理 ===
+
+=== 测试错误处理 ===
+
+=== 测试执行计划 ===
+
+=== 测试执行性能 ===
+
+=== 测试Delete算子 ===
+
+=== 测试算子组合 ===
+
+=== 测试Project算子 ===
+
+=== 测试Filter算子 ===
+=== 测试基本算子 ===
+
+--- 测试CreateTable算子 ---
+[OK] CreateTable结果: {'created': 'test_table'}
+
+--- 测试Insert算子 ---
+[OK] Insert结果: {'inserted': 3}
+
+--- 测试SeqScan算子 ---
+[OK] SeqScan结果: 3 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试过滤条件: 等于1 ---
+[OK] 过滤结果: 1 行
+  {'id': 1, 'name': 'Alice'}
+
+--- 测试过滤条件: 大于1 ---
+[OK] 过滤结果: 2 行
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试过滤条件: 小于3 ---
+[OK] 过滤结果: 2 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+
+--- 测试过滤条件: 大于等于2 ---
+[OK] 过滤结果: 2 行
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试过滤条件: 小于等于2 ---
+[OK] 过滤结果: 2 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+
+--- 测试过滤条件: 不等于1 ---
+[OK] 过滤结果: 2 行
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试投影: 只投影id列 ---
+[OK] 投影结果: 3 行
+  {'id': 1}
+  {'id': 2}
+  {'id': 3}
+
+--- 测试投影: 只投影name列 ---
+[OK] 投影结果: 3 行
+  {'name': 'Alice'}
+  {'name': 'Bob'}
+  {'name': 'Charlie'}
+
+--- 测试投影: 投影id和name列 ---
+[OK] 投影结果: 3 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 测试Filter + Project组合 ---
+[OK] Filter + Project结果: 2 行
+  {'name': 'Bob'}
+  {'name': 'Charlie'}
+
+--- 测试Project + Filter组合 ---
+[OK] Project + Filter结果: 2 行
+  {'id': 1, 'name': 'Alice'}
+  {'id': 2, 'name': 'Bob'}
+
+--- 测试删除操作 ---
+[OK] 删除前数据: 3 行
+[OK] 删除结果: {'deleted': 1}
+[OK] 删除后数据: 2 行
+  {'id': 2, 'name': 'Bob'}
+  {'id': 3, 'name': 'Charlie'}
+
+--- 插入大量数据 ---
+[OK] 插入1000条记录，耗时: 5.1765 秒
+[OK] 插入速度: 193 行/秒
+
+--- 测试扫描性能 ---
+[OK] 扫描1002条记录，耗时: 0.0002 秒
+[OK] 扫描速度: 5603590 行/秒
+
+--- 测试过滤性能 ---
+[OK] 过滤499条记录，耗时: 0.0003 秒
+[OK] 过滤速度: 1484367 行/秒
+
+--- 测试复杂执行计划 ---
+[OK] 复杂执行计划结果: 102 行
+[OK] 执行时间: 0.0003 秒
+  {'name': 'Bob'}
+  {'name': 'Charlie'}
+  {'name': 'User_0'}
+  {'name': 'User_1'}
+  {'name': 'User_2'}
+  ... 还有 97 行
+
+--- 测试不存在的表 ---
+[WARNING] 应该抛出异常但没有
+
+--- 测试无效的过滤条件 ---
+[WARNING] 应该抛出异常但没有
+
+--- 测试大量数据的内存管理 ---
+[OK] 创建表 large_table_0，插入500条记录
+[OK] 创建表 large_table_1，插入500条记录
+[OK] 创建表 large_table_2，插入500条记录
+[OK] 创建表 large_table_3，插入500条记录
+[OK] 创建表 large_table_4，插入500条记录
+[OK] 缓冲统计: Hits=45209, Misses=0, Evictions=0
+[OK] 内存使用: 16.03 MB
+
+==================================================
+[SUCCESS] 执行引擎测试全部通过！
+
+
+============================================================
+运行测试: 查询语言测试
+测试文件: test_query_language.py
+============================================================
+[PASS] 查询语言测试 测试通过 (耗时: 1.94秒)
+输出:
+开始查询语言测试...
+==================================================
+=== 测试词法分析器 ===
+
+--- 测试SQL: CREATE TABLE users(id INT, name VARCHAR); ---
+[OK] 词法分析成功，获得 11 个token
+  Token 1: ('CREATE', 'CREATE', 1, 1)
+  Token 2: ('TABLE', 'TABLE', 1, 8)
+  Token 3: ('IDENT', 'users', 1, 14)
+  Token 4: ('LPAREN', '(', 1, 19)
+  Token 5: ('IDENT', 'id', 1, 20)
+  ... 还有 6 个token
+
+--- 测试SQL: INSERT INTO users(id,name) VALUES (1,'Alice'); ---
+[OK] 词法分析成功，获得 15 个token
+  Token 1: ('INSERT', 'INSERT', 1, 1)
+  Token 2: ('INTO', 'INTO', 1, 8)
+  Token 3: ('IDENT', 'users', 1, 13)
+  Token 4: ('LPAREN', '(', 1, 18)
+  Token 5: ('IDENT', 'id', 1, 19)
+  ... 还有 10 个token
+
+--- 测试SQL: SELECT * FROM users; ---
+[OK] 词法分析成功，获得 5 个token
+  Token 1: ('SELECT', 'SELECT', 1, 1)
+  Token 2: ('STAR', '*', 1, 8)
+  Token 3: ('FROM', 'FROM', 1, 10)
+  Token 4: ('IDENT', 'users', 1, 15)
+  Token 5: ('SEMI', ';', 1, 20)
+
+--- 测试SQL: SELECT id, name FROM users WHERE age > 18; ---
+[OK] 词法分析成功，获得 11 个token
+  Token 1: ('SELECT', 'SELECT', 1, 1)
+  Token 2: ('IDENT', 'id', 1, 8)
+  Token 3: ('COMMA', ',', 1, 10)
+  Token 4: ('IDENT', 'name', 1, 12)
+  Token 5: ('FROM', 'FROM', 1, 17)
+  ... 还有 6 个token
+
+--- 测试SQL: DELETE FROM users WHERE id = 1; ---
+[OK] 词法分析成功，获得 8 个token
+  Token 1: ('DELETE', 'DELETE', 1, 1)
+  Token 2: ('FROM', 'FROM', 1, 8)
+  Token 3: ('IDENT', 'users', 1, 13)
+  Token 4: ('WHERE', 'WHERE', 1, 19)
+  Token 5: ('IDENT', 'id', 1, 25)
+  ... 还有 3 个token
+
+=== 测试语法分析器 ===
+
+--- 测试SQL: CREATE TABLE users(id INT, name VARCHAR); ---
+[OK] 语法分析成功，获得 1 个AST
+  AST 1: CreateTable
+
+--- 测试SQL: INSERT INTO users(id,name) VALUES (1,'Alice'); ---
+[OK] 语法分析成功，获得 1 个AST
+  AST 1: Insert
+
+--- 测试SQL: SELECT * FROM users; ---
+[OK] 语法分析成功，获得 1 个AST
+  AST 1: Select
+
+--- 测试SQL: SELECT id, name FROM users WHERE age > 18; ---
+[OK] 语法分析成功，获得 1 个AST
+  AST 1: Select
+
+--- 测试SQL: DELETE FROM users WHERE id = 1; ---
+[OK] 语法分析成功，获得 1 个AST
+  AST 1: Delete
+
+=== 测试语义分析器 ===
+
+--- 测试SQL: CREATE TABLE users(id INT, name VARCHAR, age INT); ---
+[OK] 语义分析成功: create_table
+  载荷: {'table': 'users', 'columns': [('id', 'INT'), ('name', 'VARCHAR'), ('age', 'INT')]}
+
+--- 测试SQL: INSERT INTO users(id,name,age) VALUES (1,'Alice',20); ---
+[ERROR] 语义分析失败: table 'users' does not exist
+
+--- 测试SQL: SELECT * FROM users; ---
+[ERROR] 语义分析失败: table 'users' does not exist
+
+--- 测试SQL: SELECT id, name FROM users WHERE age > 18; ---
+[ERROR] 语义分析失败: table 'users' does not exist
+
+--- 测试SQL: DELETE FROM users WHERE id = 1; ---
+[ERROR] 语义分析失败: table 'users' does not exist
+
+=== 测试查询规划器 ===
+
+=== 测试语义分析器 ===
+
+--- 测试SQL: CREATE TABLE users(id INT, name VARCHAR, age INT); ---
+[OK] 语义分析成功: create_table
+  载荷: {'table': 'users', 'columns': [('id', 'INT'), ('name', 'VARCHAR'), ('age', 'INT')]}
+
+--- 测试SQL: INSERT INTO users(id,name,age) VALUES (1,'Alice',20); ---
+[ERROR] 语义分析失败: table 'users' does not exist
+
+--- 测试SQL: SELECT * FROM users; ---
+[ERROR] 语义分析失败: table 'users' does not exist
+
+--- 测试SQL: SELECT id, name FROM users WHERE age > 18; ---
+[ERROR] 语义分析失败: table 'users' does not exist
+
+--- 测试SQL: DELETE FROM users WHERE id = 1; ---
+[ERROR] 语义分析失败: table 'users' does not exist
+
+--- 测试SQL: CREATE TABLE users(id INT, name VARCHAR, age INT); ---
+[OK] 查询规划成功: CreateTable
+  执行结果: 1 行
+  示例: {'created': 'users'}
+
+--- 测试SQL: INSERT INTO users(id,name,age) VALUES (1,'Alice',20); ---
+[OK] 查询规划成功: Insert
+  执行结果: 1 行
+  示例: {'inserted': 1}
+
+--- 测试SQL: INSERT INTO users(id,name,age) VALUES (2,'Bob',17); ---
+[OK] 查询规划成功: Insert
+  执行结果: 1 行
+  示例: {'inserted': 1}
+
+--- 测试SQL: SELECT * FROM users; ---
+[OK] 查询规划成功: SeqScan
+  执行结果: 2 行
+  示例: {'id': 1, 'name': 'Alice', 'age': 20}
+
+--- 测试SQL: SELECT id, name FROM users WHERE age > 18; ---
+[OK] 查询规划成功: Project
+  执行结果: 1 行
+  示例: {'id': 1, 'name': 'Alice'}
+
+--- 测试SQL: DELETE FROM users WHERE id = 1; ---
+[OK] 查询规划成功: Delete
+  执行结果: 1 行
+  示例: {'deleted': 1}
+
+=== 测试复杂查询 ===
+
+=== 测试查询规划器 ===
+
+=== 测试语义分析器 ===
+
+--- 测试SQL: CREATE TABLE users(id INT, name VARCHAR, age INT); ---
+[OK] 语义分析成功: create_table
+  载荷: {'table': 'users', 'columns': [('id', 'INT'), ('name', 'VARCHAR'), ('age', 'INT')]}
+
+--- 测试SQL: INSERT INTO users(id,name,age) VALUES (1,'Alice',20); ---
+[ERROR] 语义分析失败: table 'users' does not exist
+
+--- 测试SQL: SELECT * FROM users; ---
+[ERROR] 语义分析失败: table 'users' does not exist
+
+--- 测试SQL: SELECT id, name FROM users WHERE age > 18; ---
+[ERROR] 语义分析失败: table 'users' does not exist
+
+--- 测试SQL: DELETE FROM users WHERE id = 1; ---
+[ERROR] 语义分析失败: table 'users' does not exist
+
+--- 测试SQL: CREATE TABLE users(id INT, name VARCHAR, age INT); ---
+[OK] 查询规划成功: CreateTable
+  执行结果: 1 行
+  示例: {'created': 'users'}
+
+--- 测试SQL: INSERT INTO users(id,name,age) VALUES (1,'Alice',20); ---
+[OK] 查询规划成功: Insert
+  执行结果: 1 行
+  示例: {'inserted': 1}
+
+--- 测试SQL: INSERT INTO users(id,name,age) VALUES (2,'Bob',17); ---
+[OK] 查询规划成功: Insert
+  执行结果: 1 行
+  示例: {'inserted': 1}
+
+--- 测试SQL: SELECT * FROM users; ---
+[OK] 查询规划成功: SeqScan
+  执行结果: 2 行
+  示例: {'id': 1, 'name': 'Alice', 'age': 20}
+
+--- 测试SQL: SELECT id, name FROM users WHERE age > 18; ---
+[OK] 查询规划成功: Project
+  执行结果: 1 行
+  示例: {'id': 1, 'name': 'Alice'}
+
+--- 测试SQL: DELETE FROM users WHERE id = 1; ---
+[OK] 查询规划成功: Delete
+  执行结果: 1 行
+  示例: {'deleted': 1}
+
+--- 测试复杂查询: SELECT * FROM users WHERE age >= 18; ---
+[OK] 复杂查询成功: 0 行
+
+--- 测试复杂查询: SELECT id, name FROM users WHERE age > 17; ---
+[OK] 复杂查询成功: 0 行
+
+--- 测试复杂查询: SELECT * FROM users WHERE name = 'Alice'; ---
+[OK] 复杂查询成功: 0 行
+
+--- 测试复杂查询: SELECT * FROM users WHERE id > 0; ---
+[OK] 复杂查询成功: 1 行
+  {'id': 2, 'name': 'Bob', 'age': 17}
+
+=== 测试查询优化 ===
+
+=== 测试复杂查询 ===
+
+=== 测试查询规划器 ===
+
+=== 测试语义分析器 ===
+
+--- 测试SQL: CREATE TABLE users(id INT, name VARCHAR, age INT); ---
+[OK] 语义分析成功: create_table
+  载荷: {'table': 'users', 'columns': [('id', 'INT'), ('name', 'VARCHAR'), ('age', 'INT')]}
+
+--- 测试SQL: INSERT INTO users(id,name,age) VALUES (1,'Alice',20); ---
+[ERROR] 语义分析失败: table 'users' does not exist
+
+--- 测试SQL: SELECT * FROM users; ---
+[ERROR] 语义分析失败: table 'users' does not exist
+
+--- 测试SQL: SELECT id, name FROM users WHERE age > 18; ---
+[ERROR] 语义分析失败: table 'users' does not exist
+
+--- 测试SQL: DELETE FROM users WHERE id = 1; ---
+[ERROR] 语义分析失败: table 'users' does not exist
+
+--- 测试SQL: CREATE TABLE users(id INT, name VARCHAR, age INT); ---
+[OK] 查询规划成功: CreateTable
+  执行结果: 1 行
+  示例: {'created': 'users'}
+
+--- 测试SQL: INSERT INTO users(id,name,age) VALUES (1,'Alice',20); ---
+[OK] 查询规划成功: Insert
+  执行结果: 1 行
+  示例: {'inserted': 1}
+
+--- 测试SQL: INSERT INTO users(id,name,age) VALUES (2,'Bob',17); ---
+[OK] 查询规划成功: Insert
+  执行结果: 1 行
+  示例: {'inserted': 1}
+
+--- 测试SQL: SELECT * FROM users; ---
+[OK] 查询规划成功: SeqScan
+  执行结果: 2 行
+  示例: {'id': 1, 'name': 'Alice', 'age': 20}
+
+--- 测试SQL: SELECT id, name FROM users WHERE age > 18; ---
+[OK] 查询规划成功: Project
+  执行结果: 1 行
+  示例: {'id': 1, 'name': 'Alice'}
+
+--- 测试SQL: DELETE FROM users WHERE id = 1; ---
+[OK] 查询规划成功: Delete
+  执行结果: 1 行
+  示例: {'deleted': 1}
+
+--- 测试复杂查询: SELECT * FROM users WHERE age >= 18; ---
+[OK] 复杂查询成功: 0 行
+
+--- 测试复杂查询: SELECT id, name FROM users WHERE age > 17; ---
+[OK] 复杂查询成功: 0 行
+
+--- 测试复杂查询: SELECT * FROM users WHERE name = 'Alice'; ---
+[OK] 复杂查询成功: 0 行
+
+--- 测试复杂查询: SELECT * FROM users WHERE id > 0; ---
+[OK] 复杂查询成功: 1 行
+  {'id': 2, 'name': 'Bob', 'age': 17}
+
+--- 插入更多数据 ---
+[OK] 插入100条记录完成
+
+--- 测试查询性能 ---
+
+--- 性能测试: SELECT * FROM users; ---
+[OK] 查询完成: 101 行，耗时 0.0002 秒
+[OK] 查询速度: 442659 行/秒
+
+--- 性能测试: SELECT * FROM users WHERE age > 30; ---
+[OK] 查询完成: 78 行，耗时 0.0002 秒
+[OK] 查询速度: 433894 行/秒
+
+--- 性能测试: SELECT id, name FROM users WHERE age > 30; ---
+[OK] 查询完成: 78 行，耗时 0.0005 秒
+[OK] 查询速度: 152165 行/秒
+
+--- 性能测试: SELECT * FROM users WHERE id > 50; ---
+[OK] 查询完成: 59 行，耗时 0.0002 秒
+[OK] 查询速度: 359164 行/秒
+[OK] 查询速度: 极快 (< 0.0001秒)
+
+=== 测试错误处理 ===
+
+=== 测试查询优化 ===
+
+=== 测试复杂查询 ===
+
+=== 测试查询规划器 ===
+
+=== 测试语义分析器 ===
+
+--- 测试SQL: CREATE TABLE users(id INT, name VARCHAR, age INT); ---
+[OK] 语义分析成功: create_table
+  载荷: {'table': 'users', 'columns': [('id', 'INT'), ('name', 'VARCHAR'), ('age', 'INT')]}
+
+--- 测试SQL: INSERT INTO users(id,name,age) VALUES (1,'Alice',20); ---
+[ERROR] 语义分析失败: table 'users' does not exist
+
+--- 测试SQL: SELECT * FROM users; ---
+[ERROR] 语义分析失败: table 'users' does not exist
+
+--- 测试SQL: SELECT id, name FROM users WHERE age > 18; ---
+[ERROR] 语义分析失败: table 'users' does not exist
+
+--- 测试SQL: DELETE FROM users WHERE id = 1; ---
+[ERROR] 语义分析失败: table 'users' does not exist
+
+--- 测试SQL: CREATE TABLE users(id INT, name VARCHAR, age INT); ---
+[OK] 查询规划成功: CreateTable
+  执行结果: 1 行
+  示例: {'created': 'users'}
+
+--- 测试SQL: INSERT INTO users(id,name,age) VALUES (1,'Alice',20); ---
+[OK] 查询规划成功: Insert
+  执行结果: 1 行
+  示例: {'inserted': 1}
+
+--- 测试SQL: INSERT INTO users(id,name,age) VALUES (2,'Bob',17); ---
+[OK] 查询规划成功: Insert
+  执行结果: 1 行
+  示例: {'inserted': 1}
+
+--- 测试SQL: SELECT * FROM users; ---
+[OK] 查询规划成功: SeqScan
+  执行结果: 2 行
+  示例: {'id': 1, 'name': 'Alice', 'age': 20}
+
+--- 测试SQL: SELECT id, name FROM users WHERE age > 18; ---
+[OK] 查询规划成功: Project
+  执行结果: 1 行
+  示例: {'id': 1, 'name': 'Alice'}
+
+--- 测试SQL: DELETE FROM users WHERE id = 1; ---
+[OK] 查询规划成功: Delete
+  执行结果: 1 行
+  示例: {'deleted': 1}
+
+--- 测试复杂查询: SELECT * FROM users WHERE age >= 18; ---
+[OK] 复杂查询成功: 0 行
+
+--- 测试复杂查询: SELECT id, name FROM users WHERE age > 17; ---
+[OK] 复杂查询成功: 0 行
+
+--- 测试复杂查询: SELECT * FROM users WHERE name = 'Alice'; ---
+[OK] 复杂查询成功: 0 行
+
+--- 测试复杂查询: SELECT * FROM users WHERE id > 0; ---
+[OK] 复杂查询成功: 1 行
+  {'id': 2, 'name': 'Bob', 'age': 17}
+
+--- 插入更多数据 ---
+[OK] 插入100条记录完成
+
+--- 测试查询性能 ---
+
+--- 性能测试: SELECT * FROM users; ---
+[OK] 查询完成: 101 行，耗时 0.0002 秒
+[OK] 查询速度: 491444 行/秒
+
+--- 性能测试: SELECT * FROM users WHERE age > 30; ---
+[OK] 查询完成: 78 行，耗时 0.0002 秒
+[OK] 查询速度: 394639 行/秒
+
+--- 性能测试: SELECT id, name FROM users WHERE age > 30; ---
+[OK] 查询完成: 78 行，耗时 0.0002 秒
+[OK] 查询速度: 322957 行/秒
+
+--- 性能测试: SELECT * FROM users WHERE id > 50; ---
+[OK] 查询完成: 59 行，耗时 0.0002 秒
+[OK] 查询速度: 340391 行/秒
+[OK] 查询速度: 极快 (< 0.0001秒)
+
+--- 测试语法错误 ---
+
+--- 测试语法错误: CREATE TABLE users(id INT, name VARCHAR ---
+[OK] 正确处理语法错误: Expected RPAREN, got EOF
+
+--- 测试语法错误: INSERT INTO users(id,name) VALUES (1,'Alice' ---
+[OK] 正确处理语法错误: Expected RPAREN, got EOF
+
+--- 测试语法错误: SELECT * FROM users WHERE ---
+[OK] 正确处理语法错误: Expected IDENT, got EOF
+
+--- 测试语法错误: DELETE FROM users WHERE ---
+[OK] 正确处理语法错误: Expected IDENT, got EOF
+
+--- 测试语义错误 ---
+
+--- 测试语义错误: SELECT * FROM nonexistent_table; ---
+[OK] 正确处理语义错误: table 'nonexistent_table' does not exist
+
+--- 测试语义错误: SELECT nonexistent_column FROM users; ---
+[OK] 正确处理语义错误: unknown column 'nonexistent_column' for table 'users'
+
+--- 测试语义错误: INSERT INTO users(nonexistent_column) VALUES (1); ---
+[OK] 正确处理语义错误: unknown column 'nonexistent_column' for table 'users'
+
+--- 测试语义错误: DELETE FROM nonexistent_table WHERE id = 1; ---
+[OK] 正确处理语义错误: table 'nonexistent_table' does not exist
+
+=== 测试多语句执行 ===
+
+=== 测试错误处理 ===
+
+=== 测试查询优化 ===
+
+=== 测试复杂查询 ===
+
+=== 测试查询规划器 ===
+
+=== 测试语义分析器 ===
+
+--- 测试SQL: CREATE TABLE users(id INT, name VARCHAR, age INT); ---
+[OK] 语义分析成功: create_table
+  载荷: {'table': 'users', 'columns': [('id', 'INT'), ('name', 'VARCHAR'), ('age', 'INT')]}
+
+--- 测试SQL: INSERT INTO users(id,name,age) VALUES (1,'Alice',20); ---
+[ERROR] 语义分析失败: table 'users' does not exist
+
+--- 测试SQL: SELECT * FROM users; ---
+[ERROR] 语义分析失败: table 'users' does not exist
+
+--- 测试SQL: SELECT id, name FROM users WHERE age > 18; ---
+[ERROR] 语义分析失败: table 'users' does not exist
+
+--- 测试SQL: DELETE FROM users WHERE id = 1; ---
+[ERROR] 语义分析失败: table 'users' does not exist
+
+--- 测试SQL: CREATE TABLE users(id INT, name VARCHAR, age INT); ---
+[OK] 查询规划成功: CreateTable
+  执行结果: 1 行
+  示例: {'created': 'users'}
+
+--- 测试SQL: INSERT INTO users(id,name,age) VALUES (1,'Alice',20); ---
+[OK] 查询规划成功: Insert
+  执行结果: 1 行
+  示例: {'inserted': 1}
+
+--- 测试SQL: INSERT INTO users(id,name,age) VALUES (2,'Bob',17); ---
+[OK] 查询规划成功: Insert
+  执行结果: 1 行
+  示例: {'inserted': 1}
+
+--- 测试SQL: SELECT * FROM users; ---
+[OK] 查询规划成功: SeqScan
+  执行结果: 2 行
+  示例: {'id': 1, 'name': 'Alice', 'age': 20}
+
+--- 测试SQL: SELECT id, name FROM users WHERE age > 18; ---
+[OK] 查询规划成功: Project
+  执行结果: 1 行
+  示例: {'id': 1, 'name': 'Alice'}
+
+--- 测试SQL: DELETE FROM users WHERE id = 1; ---
+[OK] 查询规划成功: Delete
+  执行结果: 1 行
+  示例: {'deleted': 1}
+
+--- 测试复杂查询: SELECT * FROM users WHERE age >= 18; ---
+[OK] 复杂查询成功: 0 行
+
+--- 测试复杂查询: SELECT id, name FROM users WHERE age > 17; ---
+[OK] 复杂查询成功: 0 行
+
+--- 测试复杂查询: SELECT * FROM users WHERE name = 'Alice'; ---
+[OK] 复杂查询成功: 0 行
+
+--- 测试复杂查询: SELECT * FROM users WHERE id > 0; ---
+[OK] 复杂查询成功: 1 行
+  {'id': 2, 'name': 'Bob', 'age': 17}
+
+--- 插入更多数据 ---
+[OK] 插入100条记录完成
+
+--- 测试查询性能 ---
+
+--- 性能测试: SELECT * FROM users; ---
+[OK] 查询完成: 101 行，耗时 0.0001 秒
+[OK] 查询速度: 718008 行/秒
+
+--- 性能测试: SELECT * FROM users WHERE age > 30; ---
+[OK] 查询完成: 78 行，耗时 0.0002 秒
+[OK] 查询速度: 495690 行/秒
+
+--- 性能测试: SELECT id, name FROM users WHERE age > 30; ---
+[OK] 查询完成: 78 行，耗时 0.0002 秒
+[OK] 查询速度: 506433 行/秒
+
+--- 性能测试: SELECT * FROM users WHERE id > 50; ---
+[OK] 查询完成: 59 行，耗时 0.0001 秒
+[OK] 查询速度: 537965 行/秒
+[OK] 查询速度: 极快 (< 0.0001秒)
+
+--- 测试语法错误 ---
+
+--- 测试语法错误: CREATE TABLE users(id INT, name VARCHAR ---
+[OK] 正确处理语法错误: Expected RPAREN, got EOF
+
+--- 测试语法错误: INSERT INTO users(id,name) VALUES (1,'Alice' ---
+[OK] 正确处理语法错误: Expected RPAREN, got EOF
+
+--- 测试语法错误: SELECT * FROM users WHERE ---
+[OK] 正确处理语法错误: Expected IDENT, got EOF
+
+--- 测试语法错误: DELETE FROM users WHERE ---
+[OK] 正确处理语法错误: Expected IDENT, got EOF
+
+--- 测试语义错误 ---
+
+--- 测试语义错误: SELECT * FROM nonexistent_table; ---
+[OK] 正确处理语义错误: table 'nonexistent_table' does not exist
+
+--- 测试语义错误: SELECT nonexistent_column FROM users; ---
+[OK] 正确处理语义错误: unknown column 'nonexistent_column' for table 'users'
+
+--- 测试语义错误: INSERT INTO users(nonexistent_column) VALUES (1); ---
+[OK] 正确处理语义错误: unknown column 'nonexistent_column' for table 'users'
+
+--- 测试语义错误: DELETE FROM nonexistent_table WHERE id = 1; ---
+[OK] 正确处理语义错误: table 'nonexistent_table' does not exist
+
+--- 测试多语句执行 ---
+[OK] 解析出 8 个语句
+
+--- 执行语句 1: CreateTable ---
+[OK] 执行成功: 1 行结果
+  结果: {'created': 'products'}
+
+--- 执行语句 2: Insert ---
+[OK] 执行成功: 1 行结果
+  结果: {'inserted': 1}
+
+--- 执行语句 3: Insert ---
+[OK] 执行成功: 1 行结果
+  结果: {'inserted': 1}
+
+--- 执行语句 4: Insert ---
+[OK] 执行成功: 1 行结果
+  结果: {'inserted': 1}
+
+--- 执行语句 5: Select ---
+[OK] 执行成功: 3 行结果
+  结果: {'id': 1, 'name': 'Laptop', 'price': 1000}
+
+--- 执行语句 6: Select ---
+[OK] 执行成功: 2 行结果
+  结果: {'id': 1, 'name': 'Laptop', 'price': 1000}
+
+--- 执行语句 7: Delete ---
+[OK] 执行成功: 1 行结果
+  结果: {'deleted': 1}
+
+--- 执行语句 8: Select ---
+[OK] 执行成功: 2 行结果
+  结果: {'id': 1, 'name': 'Laptop', 'price': 1000}
+
+==================================================
+[SUCCESS] 查询语言测试全部通过！
+
+
+============================================================
+运行测试: 系统集成测试
+测试文件: test_system_integration.py
+============================================================
+[PASS] 系统集成测试 测试通过 (耗时: 33.43秒)
+输出:
+开始系统集成测试...
+==================================================
+=== 测试完整处理流水线 ===
+[OK] 系统组件创建成功
+
+--- 处理SQL: CREATE TABLE users(id INT, name VARCHAR, age INT); ---
+[OK] 词法分析: 14 个token
+[OK] 语法分析: 1 个AST
+[OK] 语义分析: create_table
+[OK] 查询规划: CreateTable
+[OK] 执行结果: [{'created': 'users'}]
+
+=== 测试CRUD集成 ===
+=== 测试完整处理流水线 ===
+[OK] 系统组件创建成功
+
+--- 处理SQL: CREATE TABLE users(id INT, name VARCHAR, age INT); ---
+[OK] 词法分析: 14 个token
+[OK] 语法分析: 1 个AST
+[OK] 语义分析: create_table
+[OK] 查询规划: CreateTable
+[OK] 执行结果: [{'created': 'users'}]
+
+--- CRUD操作 1: INSERT INTO users(id,name,age) VALUES (1,'Alice',20); ---
+[OK] 操作完成: [{'inserted': 1}]
+
+--- CRUD操作 2: INSERT INTO users(id,name,age) VALUES (2,'Bob',17); ---
+[OK] 操作完成: [{'inserted': 1}]
+
+--- CRUD操作 3: INSERT INTO users(id,name,age) VALUES (3,'Charlie',25); ---
+[OK] 操作完成: [{'inserted': 1}]
+
+--- CRUD操作 4: SELECT * FROM users; ---
+[OK] 操作完成: [{'id': 1, 'name': 'Alice', 'age': 20}, {'id': 2, 'name': 'Bob', 'age': 17}, {'id': 3, 'name': 'Charlie', 'age': 25}]
+
+--- CRUD操作 5: SELECT id, name FROM users WHERE age >= 18; ---
+[OK] 操作完成: [{'id': 1, 'name': 'Alice'}, {'id': 3, 'name': 'Charlie'}]
+
+--- CRUD操作 6: DELETE FROM users WHERE age < 18; ---
+[OK] 操作完成: [{'deleted': 1}]
+
+--- CRUD操作 7: SELECT * FROM users; ---
+[OK] 操作完成: [{'id': 1, 'name': 'Alice', 'age': 20}, {'id': 3, 'name': 'Charlie', 'age': 25}]
+
+=== 测试性能集成 ===
+
+=== 测试CRUD集成 ===
+=== 测试完整处理流水线 ===
+[OK] 系统组件创建成功
+
+--- 处理SQL: CREATE TABLE users(id INT, name VARCHAR, age INT); ---
+[OK] 词法分析: 14 个token
+[OK] 语法分析: 1 个AST
+[OK] 语义分析: create_table
+[OK] 查询规划: CreateTable
+[OK] 执行结果: [{'created': 'users'}]
+
+--- CRUD操作 1: INSERT INTO users(id,name,age) VALUES (1,'Alice',20); ---
+[OK] 操作完成: [{'inserted': 1}]
+
+--- CRUD操作 2: INSERT INTO users(id,name,age) VALUES (2,'Bob',17); ---
+[OK] 操作完成: [{'inserted': 1}]
+
+--- CRUD操作 3: INSERT INTO users(id,name,age) VALUES (3,'Charlie',25); ---
+[OK] 操作完成: [{'inserted': 1}]
+
+--- CRUD操作 4: SELECT * FROM users; ---
+[OK] 操作完成: [{'id': 1, 'name': 'Alice', 'age': 20}, {'id': 2, 'name': 'Bob', 'age': 17}, {'id': 3, 'name': 'Charlie', 'age': 25}]
+
+--- CRUD操作 5: SELECT id, name FROM users WHERE age >= 18; ---
+[OK] 操作完成: [{'id': 1, 'name': 'Alice'}, {'id': 3, 'name': 'Charlie'}]
+
+--- CRUD操作 6: DELETE FROM users WHERE age < 18; ---
+[OK] 操作完成: [{'deleted': 1}]
+
+--- CRUD操作 7: SELECT * FROM users; ---
+[OK] 操作完成: [{'id': 1, 'name': 'Alice', 'age': 20}, {'id': 3, 'name': 'Charlie', 'age': 25}]
+
+--- 大量数据插入测试 ---
+[OK] 插入1000条记录，耗时: 5.4447 秒
+[OK] 插入速度: 184 行/秒
+
+--- 查询性能测试 ---
+[OK] 查询1002条记录，耗时: 0.0005 秒
+[OK] 查询速度: 1825670 行/秒
+
+--- 条件查询性能测试 ---
+[OK] 条件查询780条记录，耗时: 0.0009 秒
+[OK] 过滤速度: 912059 行/秒
+
+=== 测试存储集成 ===
+
+=== 测试性能集成 ===
+
+=== 测试CRUD集成 ===
+=== 测试完整处理流水线 ===
+[OK] 系统组件创建成功
+
+--- 处理SQL: CREATE TABLE users(id INT, name VARCHAR, age INT); ---
+[OK] 词法分析: 14 个token
+[OK] 语法分析: 1 个AST
+[OK] 语义分析: create_table
+[OK] 查询规划: CreateTable
+[OK] 执行结果: [{'created': 'users'}]
+
+--- CRUD操作 1: INSERT INTO users(id,name,age) VALUES (1,'Alice',20); ---
+[OK] 操作完成: [{'inserted': 1}]
+
+--- CRUD操作 2: INSERT INTO users(id,name,age) VALUES (2,'Bob',17); ---
+[OK] 操作完成: [{'inserted': 1}]
+
+--- CRUD操作 3: INSERT INTO users(id,name,age) VALUES (3,'Charlie',25); ---
+[OK] 操作完成: [{'inserted': 1}]
+
+--- CRUD操作 4: SELECT * FROM users; ---
+[OK] 操作完成: [{'id': 1, 'name': 'Alice', 'age': 20}, {'id': 2, 'name': 'Bob', 'age': 17}, {'id': 3, 'name': 'Charlie', 'age': 25}]
+
+--- CRUD操作 5: SELECT id, name FROM users WHERE age >= 18; ---
+[OK] 操作完成: [{'id': 1, 'name': 'Alice'}, {'id': 3, 'name': 'Charlie'}]
+
+--- CRUD操作 6: DELETE FROM users WHERE age < 18; ---
+[OK] 操作完成: [{'deleted': 1}]
+
+--- CRUD操作 7: SELECT * FROM users; ---
+[OK] 操作完成: [{'id': 1, 'name': 'Alice', 'age': 20}, {'id': 3, 'name': 'Charlie', 'age': 25}]
+
+--- 大量数据插入测试 ---
+[OK] 插入1000条记录，耗时: 5.4365 秒
+[OK] 插入速度: 184 行/秒
+
+--- 查询性能测试 ---
+[OK] 查询1002条记录，耗时: 0.0005 秒
+[OK] 查询速度: 2083635 行/秒
+
+--- 条件查询性能测试 ---
+[OK] 条件查询780条记录，耗时: 0.0008 秒
+[OK] 过滤速度: 1018225 行/秒
+
+--- 存储统计 ---
+[OK] 缓冲统计: Hits=7096, Misses=0, Evictions=0
+[OK] 文件大小: 49152 字节
+[OK] 页数: 12
+
+--- 数据持久化测试 ---
+[OK] 数据刷新完成
+
+--- 模拟重启 ---
+[OK] 重启后数据恢复: 1002 行
+
+=== 测试并发模拟 ===
+
+=== 测试存储集成 ===
+
+=== 测试性能集成 ===
+
+=== 测试CRUD集成 ===
+=== 测试完整处理流水线 ===
+[OK] 系统组件创建成功
+
+--- 处理SQL: CREATE TABLE users(id INT, name VARCHAR, age INT); ---
+[OK] 词法分析: 14 个token
+[OK] 语法分析: 1 个AST
+[OK] 语义分析: create_table
+[OK] 查询规划: CreateTable
+[OK] 执行结果: [{'created': 'users'}]
+
+--- CRUD操作 1: INSERT INTO users(id,name,age) VALUES (1,'Alice',20); ---
+[OK] 操作完成: [{'inserted': 1}]
+
+--- CRUD操作 2: INSERT INTO users(id,name,age) VALUES (2,'Bob',17); ---
+[OK] 操作完成: [{'inserted': 1}]
+
+--- CRUD操作 3: INSERT INTO users(id,name,age) VALUES (3,'Charlie',25); ---
+[OK] 操作完成: [{'inserted': 1}]
+
+--- CRUD操作 4: SELECT * FROM users; ---
+[OK] 操作完成: [{'id': 1, 'name': 'Alice', 'age': 20}, {'id': 2, 'name': 'Bob', 'age': 17}, {'id': 3, 'name': 'Charlie', 'age': 25}]
+
+--- CRUD操作 5: SELECT id, name FROM users WHERE age >= 18; ---
+[OK] 操作完成: [{'id': 1, 'name': 'Alice'}, {'id': 3, 'name': 'Charlie'}]
+
+--- CRUD操作 6: DELETE FROM users WHERE age < 18; ---
+[OK] 操作完成: [{'deleted': 1}]
+
+--- CRUD操作 7: SELECT * FROM users; ---
+[OK] 操作完成: [{'id': 1, 'name': 'Alice', 'age': 20}, {'id': 3, 'name': 'Charlie', 'age': 25}]
+
+--- 大量数据插入测试 ---
+[OK] 插入1000条记录，耗时: 5.4243 秒
+[OK] 插入速度: 184 行/秒
+
+--- 查询性能测试 ---
+[OK] 查询1002条记录，耗时: 0.0006 秒
+[OK] 查询速度: 1665752 行/秒
+
+--- 条件查询性能测试 ---
+[OK] 条件查询780条记录，耗时: 0.0010 秒
+[OK] 过滤速度: 802245 行/秒
+
+--- 存储统计 ---
+[OK] 缓冲统计: Hits=7096, Misses=0, Evictions=0
+[OK] 文件大小: 49152 字节
+[OK] 页数: 12
+
+--- 数据持久化测试 ---
+[OK] 数据刷新完成
+
+--- 模拟重启 ---
+[OK] 重启后数据恢复: 1002 行
+
+--- 模拟并发操作 ---
+[OK] 创建多个表完成
+
+--- 并发插入数据 ---
+[OK] 并发插入完成，耗时: 1.6112 秒
+[OK] 表 table1: 100 行
+[OK] 表 table2: 100 行
+[OK] 表 table3: 100 行
+
+=== 测试错误恢复 ===
+
+=== 测试并发模拟 ===
+
+=== 测试存储集成 ===
+
+=== 测试性能集成 ===
+
+=== 测试CRUD集成 ===
+=== 测试完整处理流水线 ===
+[OK] 系统组件创建成功
+
+--- 处理SQL: CREATE TABLE users(id INT, name VARCHAR, age INT); ---
+[OK] 词法分析: 14 个token
+[OK] 语法分析: 1 个AST
+[OK] 语义分析: create_table
+[OK] 查询规划: CreateTable
+[OK] 执行结果: [{'created': 'users'}]
+
+--- CRUD操作 1: INSERT INTO users(id,name,age) VALUES (1,'Alice',20); ---
+[OK] 操作完成: [{'inserted': 1}]
+
+--- CRUD操作 2: INSERT INTO users(id,name,age) VALUES (2,'Bob',17); ---
+[OK] 操作完成: [{'inserted': 1}]
+
+--- CRUD操作 3: INSERT INTO users(id,name,age) VALUES (3,'Charlie',25); ---
+[OK] 操作完成: [{'inserted': 1}]
+
+--- CRUD操作 4: SELECT * FROM users; ---
+[OK] 操作完成: [{'id': 1, 'name': 'Alice', 'age': 20}, {'id': 2, 'name': 'Bob', 'age': 17}, {'id': 3, 'name': 'Charlie', 'age': 25}]
+
+--- CRUD操作 5: SELECT id, name FROM users WHERE age >= 18; ---
+[OK] 操作完成: [{'id': 1, 'name': 'Alice'}, {'id': 3, 'name': 'Charlie'}]
+
+--- CRUD操作 6: DELETE FROM users WHERE age < 18; ---
+[OK] 操作完成: [{'deleted': 1}]
+
+--- CRUD操作 7: SELECT * FROM users; ---
+[OK] 操作完成: [{'id': 1, 'name': 'Alice', 'age': 20}, {'id': 3, 'name': 'Charlie', 'age': 25}]
+
+--- 大量数据插入测试 ---
+[OK] 插入1000条记录，耗时: 5.4243 秒
+[OK] 插入速度: 184 行/秒
+
+--- 查询性能测试 ---
+[OK] 查询1002条记录，耗时: 0.0004 秒
+[OK] 查询速度: 2245028 行/秒
+
+--- 条件查询性能测试 ---
+[OK] 条件查询780条记录，耗时: 0.0008 秒
+[OK] 过滤速度: 965061 行/秒
+
+--- 存储统计 ---
+[OK] 缓冲统计: Hits=7096, Misses=0, Evictions=0
+[OK] 文件大小: 49152 字节
+[OK] 页数: 12
+
+--- 数据持久化测试 ---
+[OK] 数据刷新完成
+
+--- 模拟重启 ---
+[OK] 重启后数据恢复: 1002 行
+
+--- 模拟并发操作 ---
+[OK] 创建多个表完成
+
+--- 并发插入数据 ---
+[OK] 并发插入完成，耗时: 1.6208 秒
+[OK] 表 table1: 100 行
+[OK] 表 table2: 100 行
+[OK] 表 table3: 100 行
+
+--- 测试错误恢复 ---
+
+--- 测试无效操作: SELECT * FROM nonexistent_table; ---
+[OK] 正确处理错误: table 'nonexistent_table' does not exist
+
+--- 测试无效操作: INSERT INTO nonexistent_table(id) VALUES (1); ---
+[OK] 正确处理错误: table 'nonexistent_table' does not exist
+
+--- 测试无效操作: DELETE FROM nonexistent_table WHERE id = 1; ---
+[OK] 正确处理错误: table 'nonexistent_table' does not exist
+
+--- 测试系统恢复 ---
+[OK] 系统恢复正常: 100 行
+
+=== 测试系统限制 ===
+
+=== 测试错误恢复 ===
+
+=== 测试并发模拟 ===
+
+=== 测试存储集成 ===
+
+=== 测试性能集成 ===
+
+=== 测试CRUD集成 ===
+=== 测试完整处理流水线 ===
+[OK] 系统组件创建成功
+
+--- 处理SQL: CREATE TABLE users(id INT, name VARCHAR, age INT); ---
+[OK] 词法分析: 14 个token
+[OK] 语法分析: 1 个AST
+[OK] 语义分析: create_table
+[OK] 查询规划: CreateTable
+[OK] 执行结果: [{'created': 'users'}]
+
+--- CRUD操作 1: INSERT INTO users(id,name,age) VALUES (1,'Alice',20); ---
+[OK] 操作完成: [{'inserted': 1}]
+
+--- CRUD操作 2: INSERT INTO users(id,name,age) VALUES (2,'Bob',17); ---
+[OK] 操作完成: [{'inserted': 1}]
+
+--- CRUD操作 3: INSERT INTO users(id,name,age) VALUES (3,'Charlie',25); ---
+[OK] 操作完成: [{'inserted': 1}]
+
+--- CRUD操作 4: SELECT * FROM users; ---
+[OK] 操作完成: [{'id': 1, 'name': 'Alice', 'age': 20}, {'id': 2, 'name': 'Bob', 'age': 17}, {'id': 3, 'name': 'Charlie', 'age': 25}]
+
+--- CRUD操作 5: SELECT id, name FROM users WHERE age >= 18; ---
+[OK] 操作完成: [{'id': 1, 'name': 'Alice'}, {'id': 3, 'name': 'Charlie'}]
+
+--- CRUD操作 6: DELETE FROM users WHERE age < 18; ---
+[OK] 操作完成: [{'deleted': 1}]
+
+--- CRUD操作 7: SELECT * FROM users; ---
+[OK] 操作完成: [{'id': 1, 'name': 'Alice', 'age': 20}, {'id': 3, 'name': 'Charlie', 'age': 25}]
+
+--- 大量数据插入测试 ---
+[OK] 插入1000条记录，耗时: 5.3989 秒
+[OK] 插入速度: 185 行/秒
+
+--- 查询性能测试 ---
+[OK] 查询1002条记录，耗时: 0.0005 秒
+[OK] 查询速度: 1831239 行/秒
+
+--- 条件查询性能测试 ---
+[OK] 条件查询780条记录，耗时: 0.0008 秒
+[OK] 过滤速度: 1016327 行/秒
+
+--- 存储统计 ---
+[OK] 缓冲统计: Hits=7096, Misses=0, Evictions=0
+[OK] 文件大小: 49152 字节
+[OK] 页数: 12
+
+--- 数据持久化测试 ---
+[OK] 数据刷新完成
+
+--- 模拟重启 ---
+[OK] 重启后数据恢复: 1002 行
+
+--- 模拟并发操作 ---
+[OK] 创建多个表完成
+
+--- 并发插入数据 ---
+[OK] 并发插入完成，耗时: 2.0831 秒
+[OK] 表 table1: 100 行
+[OK] 表 table2: 100 行
+[OK] 表 table3: 100 行
+
+--- 测试错误恢复 ---
+
+--- 测试无效操作: SELECT * FROM nonexistent_table; ---
+[OK] 正确处理错误: table 'nonexistent_table' does not exist
+
+--- 测试无效操作: INSERT INTO nonexistent_table(id) VALUES (1); ---
+[OK] 正确处理错误: table 'nonexistent_table' does not exist
+
+--- 测试无效操作: DELETE FROM nonexistent_table WHERE id = 1; ---
+[OK] 正确处理错误: table 'nonexistent_table' does not exist
+
+--- 测试系统恢复 ---
+[OK] 系统恢复正常: 100 行
+
+--- 测试系统限制 ---
+
+--- 测试大量表创建 ---
+[OK] 创建50个表，耗时: 0.2654 秒
+[OK] 内存使用: 15.59 MB
+[OK] 最终缓冲统计: Hits=751, Misses=14, Evictions=0
+
+==================================================
+[SUCCESS] 系统集成测试全部通过！
+
+
+============================================================
+测试总结
+============================================================
+总测试数: 4
+通过: 4
+失败: 0
+成功率: 100.0%
+
+[SUCCESS] 所有集成测试都通过了！
+
+数据库系统功能验证:
+✓ 核心CRUD操作 (CREATE, INSERT, SELECT, DELETE)
+✓ 执行引擎 (算子、执行计划、性能)
+✓ 查询语言 (词法分析、语法分析、语义分析)
+✓ 系统集成 (存储引擎、缓冲管理、持久化)

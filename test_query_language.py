@@ -248,7 +248,7 @@ def test_query_optimization():
             
             print(f"[OK] 查询完成: {len(result)} 行，耗时 {duration:.4f} 秒")
             if duration > 0:
-            print(f"[OK] 查询速度: {len(result)/duration:.0f} 行/秒")
+                            print(f"[OK] 查询速度: {len(result)/duration:.0f} 行/秒")
         else:
             print(f"[OK] 查询速度: 极快 (< 0.0001秒)")
         
