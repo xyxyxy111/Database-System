@@ -1,8 +1,4 @@
-# 简易数据库系统（SQL 编译器 + 页式存储 + 执行引擎）
-
-本项目用于课程实训与教学，贯通编译原理、操作系统与数据库三大模块，实现一个可持久化的简化数据库原型。它支持 CREATE TABLE、INSERT、SELECT（含 WHERE 比较）、DELETE 四类核心语句，采用固定 4KB 页式存储与 LRU 缓冲，内置系统目录持久化表结构。
-
-## 一、实训目标
+## 一、目标
 - SQL 编译器：掌握词法/语法/语义/计划生成；理解 SQL → 执行计划流程。
 - 操作系统实践：页式存储、文件页 I/O、缓冲管理与替换策略。
 - 数据库系统：执行引擎、存储引擎与查询语言的集成，实现核心 CRUD。
@@ -43,9 +39,7 @@
   - `table.py`：堆表，`insert/scan/delete`
 - `main.py`：CLI，支持 `--debug-pipeline`、`--stats` 与 `@file.sql`
 
-## 四、快速开始
-环境：Python 3.9+（推荐 3.10+）
-
+## 四、测试
 1) 建表
 ```bash
 python main.py .\my.db "CREATE TABLE student(id INT, name VARCHAR, age INT);"
@@ -53,7 +47,6 @@ python main.py .\my.db "CREATE TABLE student(id INT, name VARCHAR, age INT);"
 2) 插入
 ```bash
 python main.py .\my.db "INSERT INTO student(id,name,age) VALUES (1,'Alice',20);"
-python main.py .\my.db "INSERT INTO student(id,name,age) VALUES (2,'Bob',17);"
 ```
 3) 查询
 ```bash
@@ -65,10 +58,18 @@ python main.py .\my.db "DELETE FROM student WHERE id = 1;"
 ```
 5) 文件执行多语句
 ```bash
-# script.sql
-# CREATE TABLE student(id INT, name VARCHAR, age INT);
-# INSERT INTO student(id,name,age) VALUES (1,'Alice',20);
-# SELECT * FROM student;
+python main.py .\my.db "
+INSERT INTO student(id, name, age) VALUES (1, 'Alice', 20);
+INSERT INTO student(id, name, age) VALUES (2, 'Bob', 21);
+INSERT INTO student(id, name, age) VALUES (3, 'Charlie', 22);
+INSERT INTO student(id, name, age) VALUES (4, 'David', 19);
+INSERT INTO student(id, name, age) VALUES (5, 'Eva', 20);
+INSERT INTO student(id, name, age) VALUES (6, 'Frank', 23);
+INSERT INTO student(id, name, age) VALUES (7, 'Grace', 21);
+INSERT INTO student(id, name, age) VALUES (8, 'Henry', 22);
+INSERT INTO student(id, name, age) VALUES (9, 'Ivy', 20);
+INSERT INTO student(id, name, age) VALUES (10, 'Jack', 24);
+SELECT * FROM student;"
 python main.py .\my.db @script.sql
 ```
 

@@ -1,4 +1,4 @@
-from typing import Any, Dict, Iterable, Iterator, List, Optional, Callable
+from typing import Any, Dict, Iterable, Iterator, List, Optional, Callable, Tuple
 
 from storage.table import Table
 from execution.sytem_catalog import SystemCatalog
@@ -127,6 +127,62 @@ class Delete(Operator):
     def close(self) -> None:
         pass
 
+class Update(Operator):
+    def __init__(self, table: Table, set_clause: List[Tuple[str, Any]], predicate: Optional[Callable[[Row], bool]] = None) -> None:
+        self.table = table
+        self.set_clause = set_clause
+        self.predicate = predicate
+        self._done = False
+        self._updated_count = 0
+
+    def open(self) -> None:
+        self._done = False
+        self._updated_count = 0
+        # 扫描表并更新符合条件的记录
+        for record in self.table.scan():
+            if self.predicate is None or self.predicate(record):
+                # 更新记录
+                updated_record = record.copy()
+                for col, value in self.set_clause:
+                    updated_record[col] = value
+                # 删除旧记录并插入新记录
+                self.table.delete(lambda r: r == record)
+                self.table.insert(updated_record)
+                self._updated_count += 1
+
+    def next(self) -> Optional[Row]:
+        if self._done:
+            return None
+        self._done = True
+        return {"updated": self._updated_count}
+
+    def close(self) -> None:
+        pass
+
+class Drop(Operator):
+    def __init__(self, syscat: SystemCatalog, table_name: str) -> None:
+        self.syscat = syscat
+        self.table_name = table_name
+        self._done = False
+
+    def open(self) -> None:
+        self._done = False
+
+    def next(self) -> Optional[Row]:
+        if self._done:
+            return None
+        # 从系统目录中删除表
+        if self.syscat.table_exists(self.table_name):
+            # 直接调用 SystemCatalog 的 drop_table 方法
+            self.syscat.drop_table(self.table_name)
+            result = {"dropped": self.table_name, "status": "success"}
+        else:
+            result = {"dropped": None, "status": "error", "message": f"Table '{self.table_name}' does not exist"}
+        self._done = True
+        return result
+
+    def close(self) -> None:
+        pass
 # Helpers
 
 def make_predicate(col: str, op: str, val: Any) -> Callable[[Row], bool]:

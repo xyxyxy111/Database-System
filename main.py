@@ -10,6 +10,9 @@ from execution.sytem_catalog import SystemCatalog
 from execution.executor import Executor
 from execution.operators import Operator
 
+import os
+if not os.path.exists('data'):
+    os.makedirs('data')
 
 def ast_to_dict(ast: Any) -> Dict[str, Any]:
     if isinstance(ast, Select):
@@ -32,7 +35,8 @@ def op_summary(op: Operator) -> str:
     return op.__class__.__name__
 
 
-def run_sqls(db_file: str, sql: str, debug: bool = False, show_stats: bool = False) -> List[Dict[str, Any]]:
+def run_sqls(db_file: str, sql: str, debug: bool = False, show_stats: bool = False, output_format: str = "terminal") -> \
+List[Dict[str, Any]]:
     syscat = SystemCatalog(db_file)
     executor = Executor(syscat)
     analyzer = SemanticAnalyzer(syscat)
@@ -62,7 +66,18 @@ def run_sqls(db_file: str, sql: str, debug: bool = False, show_stats: bool = Fal
         if debug:
             print("[PlanRoot]", op_summary(op))
         res = executor.execute_plan(op)
-        rows.extend(res)
+
+        # 如果是SELECT语句，使用新的显示功能
+        if isinstance(ast, Select) and res:
+            # 过滤掉表结构信息，只保留数据行
+            data_rows = [row for row in res if not isinstance(row, dict) or 'table' not in row or 'columns' not in row]
+            if data_rows:
+                ast.display_results(data_rows, output_format)
+            else:
+                print("查询结果为空")
+        else:
+            # 对于非SELECT语句，保持原有输出
+            rows.extend(res)
 
     if show_stats:
         hits, misses, evictions = syscat.buffer.stats()
@@ -77,6 +92,8 @@ def main() -> None:
     parser.add_argument("sql", help="SQL string or @file.sql")
     parser.add_argument("--debug-pipeline", dest="debug", action="store_true", help="print tokens/AST/analyzed/plan")
     parser.add_argument("--stats", dest="stats", action="store_true", help="print buffer manager stats")
+    parser.add_argument("--output", "-o", choices=['terminal', 'popup', 'minimal'],
+                        default='terminal', help='Output format for SELECT results')
     args = parser.parse_args()
 
     db_file = args.db_file
@@ -91,10 +108,12 @@ def main() -> None:
     print(f"数据库文件: {db_file}")
 
     try:
-        rows = run_sqls(db_file, sql, debug=args.debug, show_stats=args.stats)
-        print(f"执行结果: {rows}")
-        for r in rows:
-            print(r)
+        rows = run_sqls(db_file, sql, debug=args.debug, show_stats=args.stats, output_format=args.output)
+        # 对于非SELECT语句，输出结果
+        if rows:
+            print(f"执行结果: {rows}")
+            for r in rows:
+                print(r)
     except SemanticError as e:
         print(f"SemanticError: {e}")
     except Exception as e:
