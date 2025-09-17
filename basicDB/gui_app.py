@@ -113,11 +113,18 @@ class MiniDBGUI:
 
         # 执行按钮区
         button_frame = ttk.Frame(self.query_frame)
-        button_frame.grid(row=2, column=0, columnspan=2, sticky="w")
+        button_frame.grid(row=1, column=0, columnspan=1, sticky="w")
 
-        ttk.Button(button_frame, text="执行查询", command=self.execute_sql).grid(row=0, column=0, padx=6)
-        ttk.Button(button_frame, text="清空", command=self.clear_sql).grid(row=0, column=1, padx=6)
-        ttk.Button(button_frame, text="示例", command=self.show_examples).grid(row=0, column=2, padx=6)
+        ttk.Button(button_frame, text="执行查询", command=self.execute_sql).grid(row=0, column=0, padx=3)
+        ttk.Button(button_frame, text="清空", command=self.clear_sql).grid(row=0, column=1, padx=3)
+        ttk.Button(button_frame, text="建表插入", command=self.show_examples1).grid(row=0, column=2, padx=3)
+        ttk.Button(button_frame, text="更新删除", command=self.show_examples2).grid(row=0, column=3, padx=3)
+        ttk.Button(button_frame, text="查询", command=self.show_examples3).grid(row=0, column=4, padx=3)
+        # ttk.Button(button_frame, text="JOIN", command=self.show_examples4).grid(row=1, column=0, padx=3)
+        ttk.Button(button_frame, text="ORDER BY", command=self.show_examples5).grid(row=0, column=5, padx=3)
+        ttk.Button(button_frame, text="事务", command=self.show_examples6).grid(row=0, column=6, padx=3)
+      #  ttk.Button(button_frame, text="表达式", command=self.show_examples7).grid(row=1, column=3, padx=3)
+        ttk.Button(button_frame, text="聚合函数", command=self.show_examples8).grid(row=0, column=7, padx=3)
 
         # SQL 模板栏
         template_frame = ttk.LabelFrame(self.query_frame, text="SQL 模板", padding=6)
@@ -163,94 +170,7 @@ class MiniDBGUI:
         self.setup_data_table()
 
     def refresh_table_list(self):
-        """刷新表列表 —— 尝试调用引擎的多种刷新接口，必要时重建引擎并更新下拉与表格"""
-        import traceback
-
-        self.status_label.config(text="正在刷新表列表...")
-        self.root.update_idletasks()
-        try:
-            # 尝试常见的“重载/刷新”方法（如果数据库引擎提供）
-            refresh_methods = (
-            "reload_metadata", "refresh", "reopen", "reconnect", "load_metadata", "scan_tables", "reload")
-            for m in refresh_methods:
-                if hasattr(self.db, m):
-                    try:
-                        getattr(self.db, m)()
-                    except Exception:
-                        # 单个方法失败不影响其他尝试
-                        pass
-
-            # 获取表名（优先使用 get_all_tables）
-            tables = []
-            if hasattr(self.db, "get_all_tables"):
-                try:
-                    tables = list(self.db.get_all_tables() or [])
-                except Exception:
-                    tables = []
-            else:
-                # 退而求其次：尝试读取一些常见属性
-                candidates = []
-                for attr in ("tables", "table_names", "catalog", "metadata", "_tables"):
-                    if hasattr(self.db, attr):
-                        attr_val = getattr(self.db, attr)
-                        try:
-                            if callable(attr_val):
-                                attr_val = attr_val()
-                        except Exception:
-                            continue
-                        if isinstance(attr_val, dict):
-                            candidates = list(attr_val.keys())
-                        elif isinstance(attr_val, (list, tuple)):
-                            candidates = list(attr_val)
-                        if candidates:
-                            break
-                tables = candidates
-
-            # 如果没有表，尝试重建引擎一次（可能元数据文件被修改/损坏，需要重新打开）
-            if not tables:
-                try:
-                    if hasattr(self.db, "close"):
-                        try:
-                            self.db.close()
-                        except Exception:
-                            pass
-                    # 保留原来可能的 buffer_size（没有的话使用16）
-                    buf = getattr(self.db, "buffer_size", 16)
-                    self.db = dbEngine(self.db_path, buffer_size=buf)
-                    # 再试一次
-                    if hasattr(self.db, "get_all_tables"):
-                        tables = list(self.db.get_all_tables() or [])
-                except Exception:
-                    # 忽略重建失败，后面会给出提示
-                    traceback.print_exc()
-
-            # 规范化表名并更新下拉
-            tables = [str(t) for t in (tables or [])]
-
-            prev = self.table_var.get()
-            self.table_combo['values'] = tables
-
-            if not tables:
-                self.table_combo.set('')
-                self.table_info_label.config(text="数据库中没有表")
-                self.clear_data_table()
-                self.status_label.config(text="刷新完成: 无表")
-                return
-
-            # 尽量保留之前的选中项，否则选第一个
-            if prev and prev in tables:
-                self.table_combo.set(prev)
-            else:
-                self.table_combo.set(tables[0])
-
-            # 触发选中事件以加载数据
-            self.on_table_selected(None)
-            self.status_label.config(text=f"刷新完成: {len(tables)} 个表")
-
-        except Exception as e:
-            traceback.print_exc()
-            messagebox.showerror("错误", f"刷新表列表失败:\n{str(e)}")
-            self.status_label.config(text=f"刷新失败: {str(e)}")
+        self.on_table_selected(self);
 
     def setup_data_table(self):
         """创建数据 Treeview（带滚动）"""
@@ -444,26 +364,97 @@ class MiniDBGUI:
     def clear_sql(self):
         self.sql_text.delete("1.0", tk.END)
 
-    def show_examples(self):
+    def show_examples1(self):
         """插入示例 SQL"""
         examples = """
--- 创建表
-CREATE TABLE users (id INT, name VARCHAR(50), age INT);
--- 插入多条数据（使用相同表名）
+
+CREATE TABLE users (
+    id INT,
+    name VARCHAR(50),
+    age INT
+);
+CREATE TABLE orders (
+    order_id INT,
+    user_id INT,
+    amount INT
+);
 INSERT INTO users VALUES (1, 'Alice', 25);
 INSERT INTO users VALUES (2, 'Bob', 30);
 INSERT INTO users VALUES (3, 'Charlie', 22);
--- 查询数据（使用相同表名）
-SELECT * FROM users;
-SELECT name, age FROM users WHERE age > 25;
--- 更新数据（使用相同表名）
-UPDATE users SET age = 26 WHERE name = 'Alice';
--- 删除数据（使用相同表名）
-DELETE FROM users WHERE age < 18;
--- 删除表（使用相同表名）
-DROP TABLE users;"""
+INSERT INTO users VALUES (4, 'David', 28);
+INSERT INTO users VALUES (5, 'Eve', 35);
+INSERT INTO users VALUES (6, 'Frank', 40);
+INSERT INTO users VALUES (7, 'Grace', 19);
+INSERT INTO users VALUES (8, 'Hank', 33);
+INSERT INTO users VALUES (9, 'Ivy', 27);
+INSERT INTO users VALUES (10, 'Jack', 45);
+INSERT INTO orders VALUES (101, 1, 300);
+INSERT INTO orders VALUES (102, 2, 150);
+INSERT INTO orders VALUES (103, 1, 200);
+"""
         self.sql_text.delete("1.0", tk.END)
         self.sql_text.insert("1.0", examples.strip())
+
+    def show_examples2(self):
+            """插入示例 SQL"""
+            examples = """
+UPDATE users SET age = 26 WHERE name = 'Alice';
+DELETE FROM users WHERE age < 28;
+"""
+            self.sql_text.delete("1.0", tk.END)
+            self.sql_text.insert("1.0", examples.strip())
+
+    def show_examples3(self):
+            """插入示例 SQL"""
+            examples = """
+SELECT id, name, age FROM users;
+"""
+            self.sql_text.delete("1.0", tk.END)
+            self.sql_text.insert("1.0", examples.strip())
+
+    def show_examples4(self):
+            """插入示例 SQL"""
+            examples = """
+SELECT users.id, users.name, orders.order_id, orders.amount
+FROM users INNER JOIN orders  ON users.id = orders.user_id;
+"""
+            self.sql_text.delete("1.0", tk.END)
+            self.sql_text.insert("1.0", examples.strip())
+
+    def show_examples5(self):
+        """插入示例 SQL"""
+        examples = """
+SELECT name, age FROM users ORDER BY age DESC, name ASC;
+    """
+        self.sql_text.delete("1.0", tk.END)
+        self.sql_text.insert("1.0", examples.strip())
+
+    def show_examples6(self):
+        """插入示例 SQL"""
+        examples = """
+BEGIN;
+UPDATE users SET age = 28 WHERE name = 'Alice';
+COMMIT;
+
+ROLLBACK;       """
+        self.sql_text.delete("1.0", tk.END)
+        self.sql_text.insert("1.0", examples.strip())
+
+    def show_examples7(self):
+        """插入示例 SQL"""
+        examples = """
+SELECT (1 + 2) * age AS score 
+FROM users 
+WHERE (age * 2) >= (10 + 5);       """
+        self.sql_text.delete("1.0", tk.END)
+        self.sql_text.insert("1.0", examples.strip())
+
+    def show_examples8(self):
+            """插入示例 SQL"""
+            examples = """
+SELECT COUNT(*) FROM users;      """
+            self.sql_text.delete("1.0", tk.END)
+            self.sql_text.insert("1.0", examples.strip())
 
     def insert_sql_template(self, template: str):
         """把模板追加到输入框末尾（保持可重复插入）"""
@@ -484,6 +475,8 @@ DROP TABLE users;"""
                 if not self.table_var.get():
                     self.table_combo.set(tables[0])
                     self.on_table_selected(None)
+                else:
+                    self.on_table_selected(self)
             else:
                 self.table_combo.set('')
                 self.table_info_label.config(text="数据库中没有表")
@@ -511,9 +504,7 @@ DROP TABLE users;"""
                 table_info = None
 
             if table_info:
-                cols = table_info.get('columns', [])
-                count = table_info.get('record_count', '未知')
-                info_text = f"表: {table_name} | 记录数: {count} | 列数: {len(cols)}"
+                info_text = f"表: {table_name} "
                 self.table_info_label.config(text=info_text)
             else:
                 self.table_info_label.config(text=f"表: {table_name}")

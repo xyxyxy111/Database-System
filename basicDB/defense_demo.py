@@ -1,4 +1,4 @@
-"""MiniDB 答辩一键演示脚本
+"""
 
 运行方式：
     python defense_demo.py
